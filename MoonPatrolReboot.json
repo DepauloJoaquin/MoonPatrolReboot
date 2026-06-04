@@ -90,7 +90,104 @@
     "currentPlatform": "GDevelop JS platform"
   },
   "resources": {
-    "resources": []
+    "resources": [
+      {
+        "file": "camino_pixel_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "camino_pixel_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RoverLunar.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RoverLunar",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "camino_pixel_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "camino_pixel_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "ejemplo1_marcadorCamino.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ejemplo1_marcadorCamino.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "ejemplo1_marcador_v1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ejemplo1_marcador_v1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "ejemplo1_marcadorCamino_v2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ejemplo1_marcadorCamino_v2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "camino_v2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "camino_v2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "camino_pixel_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "camino_pixel_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "ChatGPT Image 3 jun 2026, 04_03_55 p.m.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ChatGPT Image 3 jun 2026, 04_03_55 p.m.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "ChatGPT Image 3 jun 2026, 04_09_15 p.m.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ChatGPT Image 3 jun 2026, 04_09_15 p.m.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "camino_pixel_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "camino_pixel_4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
+        "smoothed": false,
+        "userAdded": false
+      }
+    ]
   },
   "objects": [],
   "objectsFolderStructure": {
@@ -105,6 +202,11 @@
     }
   ],
   "externalEvents": [],
-  "eventsFunctionsExtensions": [],
+  "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/parallax"
+    }
+  ],
   "externalLayouts": []
 }
