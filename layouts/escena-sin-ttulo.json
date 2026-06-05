@@ -354,6 +354,17 @@
         {
           "type": {
             "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverDerecha\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
             "value": "PosX"
           },
           "parameters": [
@@ -414,6 +425,17 @@
             "RoverLunar",
             "Tween",
             "\"MoverDerecha\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverIzquierda\""
           ]
         },
         {
