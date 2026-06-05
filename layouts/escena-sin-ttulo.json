@@ -9,18 +9,18 @@
   "title": "",
   "v": 249,
   "uiSettings": {
-    "grid": false,
+    "grid": true,
     "gridType": "rectangular",
-    "gridWidth": 32,
-    "gridHeight": 32,
+    "gridWidth": 80,
+    "gridHeight": 80,
     "gridDepth": 32,
-    "gridOffsetX": 0,
+    "gridOffsetX": 40,
     "gridOffsetY": 0,
     "gridOffsetZ": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
-    "snap": false,
-    "zoomFactor": 0.5347489040883272,
+    "snap": true,
+    "zoomFactor": 0.5173052019271261,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -37,15 +37,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 1,
-      "height": 68,
+      "depth": 1.058823529411765,
+      "height": 72,
       "keepRatio": true,
       "layer": "",
       "name": "RoverLunar",
       "persistentUuid": "9c91325c-a837-49ef-afb7-184c6146dfd8",
-      "width": 68,
-      "x": 578,
-      "y": 551,
+      "width": 72,
+      "x": 604,
+      "y": 564,
       "zOrder": 10000,
       "numberProperties": [],
       "stringProperties": [],
@@ -54,14 +54,13 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 15,
-      "height": 717,
-      "keepRatio": true,
+      "depth": 15.062761506276152,
+      "height": 720,
       "layer": "",
       "name": "Camino",
       "persistentUuid": "1e127e96-0ff8-49cd-8005-1283cfedf751",
-      "width": 754,
-      "x": 253,
+      "width": 720,
+      "x": 280,
       "y": -1,
       "zOrder": 3,
       "numberProperties": [],
@@ -72,14 +71,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 719,
-      "keepRatio": true,
+      "height": 720,
       "layer": "",
       "name": "LineasSeparadoras",
       "persistentUuid": "d1f9aa13-90a5-4a05-b23d-70147e2d4a05",
       "width": 8,
-      "x": 748,
-      "y": -1,
+      "x": 756,
+      "y": 0,
       "zOrder": 10001,
       "numberProperties": [],
       "stringProperties": [],
@@ -89,13 +87,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 2,
-      "height": 718,
+      "height": 720,
       "layer": "",
       "name": "LineasSeparadoras",
       "persistentUuid": "d0d7314d-5b15-4447-b2ec-5d39bec65edd",
       "width": 8,
-      "x": 493,
-      "y": 1,
+      "x": 516,
+      "y": 0,
       "zOrder": 10002,
       "numberProperties": [],
       "stringProperties": [],
@@ -105,13 +103,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 718,
+      "height": 720,
       "layer": "",
       "name": "LineasSeparadoras",
       "persistentUuid": "94cd7e28-f549-48ea-a926-c7da376ab603",
       "width": 8,
-      "x": 246,
-      "y": -2,
+      "x": 272,
+      "y": 0,
       "zOrder": 10003,
       "numberProperties": [],
       "stringProperties": [],
@@ -121,13 +119,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 718,
+      "height": 720,
       "layer": "",
       "name": "LineasSeparadoras",
       "persistentUuid": "ded92673-a0c5-462c-8be1-f72d5a71ccbf",
       "width": 8,
-      "x": 999,
-      "y": -3,
+      "x": 1000,
+      "y": 0,
       "zOrder": 10003,
       "numberProperties": [],
       "stringProperties": [],
@@ -156,7 +154,12 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "RoverLunar",
@@ -324,6 +327,141 @@
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"a\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverIzquierda\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "PosX"
+          },
+          "parameters": [
+            "RoverLunar",
+            "<=",
+            "364"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverIzquierda\"",
+            "RoverLunar.X() - 240",
+            "\"easeOutQuad\"",
+            "TiempoDeCambioDeCarril_Segundos_",
+            ""
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "TiempoDeCambioDeCarril_Segundos_",
+          "type": "number",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"d\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverDerecha\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "PosX"
+          },
+          "parameters": [
+            "RoverLunar",
+            ">=",
+            "844"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverDerecha\"",
+            "RoverLunar.X() + 240",
+            "\"easeOutQuad\"",
+            "TiempoDeCambioDeCarril_Segundos_",
+            ""
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "TiempoDeCambioDeCarril_Segundos_",
+          "type": "number",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ],
   "layers": [
@@ -417,6 +555,10 @@
     {
       "name": "Scale",
       "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     }
   ]
 }
