@@ -152,7 +152,13 @@
       "persistentUuid": "2b879f6c-612a-4152-ab64-afb3dab417e2",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "estaSaltando",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -176,8 +182,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 32,
+                    "y": 32
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -329,78 +335,111 @@
       "actions": []
     },
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Funcionalidad de Salto de Rover",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [],
+      "parameters": []
+    },
+    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "value": "KeyFromTextPressed"
+            "value": "KeyFromTextJustPressed"
           },
           "parameters": [
             "",
-            "\"a\""
+            "\"Space\""
           ]
         },
         {
           "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
+            "value": "BooleanObjectVariable"
           },
           "parameters": [
             "RoverLunar",
-            "Tween",
-            "\"MoverIzquierda\""
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "True",
+            ""
           ]
         },
         {
           "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
+            "value": "ResetTimer"
           },
           "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverDerecha\""
+            "",
+            "\"tiempoSalto\""
           ]
-        },
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
         {
           "type": {
-            "inverted": true,
-            "value": "PosX"
+            "value": "CompareTimer"
           },
           "parameters": [
-            "RoverLunar",
+            "",
+            "\"tiempoSalto\"",
             "<=",
-            "364"
+            "0.75"
           ]
         },
         {
           "type": {
-            "value": "BuiltinCommonInstructions::Once"
+            "value": "ScalableCapability::ScalableBehavior::Value"
           },
-          "parameters": []
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            "<=",
+            "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "True",
+            ""
+          ]
         }
       ],
       "actions": [
         {
           "type": {
-            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
           },
           "parameters": [
             "RoverLunar",
-            "Tween",
-            "\"MoverIzquierda\"",
-            "RoverLunar.X() - 240",
-            "\"easeOutQuad\"",
-            "TiempoDeCambioDeCarril_Segundos_",
-            ""
+            "Scale",
+            "=",
+            "RoverLunar.Scale::Value() + 0.05"
           ]
-        }
-      ],
-      "variables": [
-        {
-          "name": "TiempoDeCambioDeCarril_Segundos_",
-          "type": "number",
-          "value": 0.2
         }
       ]
     },
@@ -409,81 +448,107 @@
       "conditions": [
         {
           "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"d\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
+            "value": "ScalableCapability::ScalableBehavior::Value"
           },
           "parameters": [
             "RoverLunar",
-            "Tween",
-            "\"MoverDerecha\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverIzquierda\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "PosX"
-          },
-          "parameters": [
-            "RoverLunar",
+            "Scale",
             ">=",
-            "844"
+            "2"
           ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+            "value": "ResetTimer"
           },
           "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverDerecha\"",
-            "RoverLunar.X() + 240",
-            "\"easeOutQuad\"",
-            "TiempoDeCambioDeCarril_Segundos_",
-            ""
+            "",
+            "\"tiempoCaida\""
           ]
-        }
-      ],
-      "variables": [
-        {
-          "name": "TiempoDeCambioDeCarril_Segundos_",
-          "type": "number",
-          "value": 0.2
         }
       ]
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoCaida\"",
+            "<=",
+            "0.5"
+          ]
+        },
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::Value"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            ">=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "True",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            "=",
+            "RoverLunar.Scale::Value() - 0.1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::Value"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            "<=",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        }
+      ]
     }
   ],
   "layers": [
