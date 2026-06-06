@@ -324,6 +324,163 @@
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"a\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverIzquierda\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverDerecha\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "PosX"
+          },
+          "parameters": [
+            "RoverLunar",
+            "<=",
+            "364"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverIzquierda\"",
+            "RoverLunar.X() - 240",
+            "\"easeOutQuad\"",
+            "TiempoDeCambioDeCarril_Segundos_",
+            ""
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "TiempoDeCambioDeCarril_Segundos_",
+          "type": "number",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"d\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverDerecha\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverIzquierda\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "PosX"
+          },
+          "parameters": [
+            "RoverLunar",
+            ">=",
+            "844"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverDerecha\"",
+            "RoverLunar.X() + 240",
+            "\"easeOutQuad\"",
+            "TiempoDeCambioDeCarril_Segundos_",
+            ""
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "TiempoDeCambioDeCarril_Segundos_",
+          "type": "number",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ],
   "layers": [
