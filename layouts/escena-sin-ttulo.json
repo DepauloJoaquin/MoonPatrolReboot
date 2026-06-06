@@ -44,8 +44,8 @@
       "name": "RoverLunar",
       "persistentUuid": "9c91325c-a837-49ef-afb7-184c6146dfd8",
       "width": 68,
-      "x": 578,
-      "y": 551,
+      "x": 620,
+      "y": 570,
       "zOrder": 10000,
       "numberProperties": [],
       "stringProperties": [],
@@ -154,7 +154,13 @@
       "persistentUuid": "2b879f6c-612a-4152-ab64-afb3dab417e2",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "estaSaltando",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -173,8 +179,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 32,
+                    "y": 32
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -324,6 +330,222 @@
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Funcionalidad de Salto de Rover",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextJustPressed"
+          },
+          "parameters": [
+            "",
+            "\"Space\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoSalto\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoSalto\"",
+            "<=",
+            "0.75"
+          ]
+        },
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::Value"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            "<=",
+            "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "True",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            "=",
+            "RoverLunar.Scale::Value() + 0.05"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::Value"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            ">=",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoCaida\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoCaida\"",
+            "<=",
+            "0.5"
+          ]
+        },
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::Value"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            ">=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "True",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            "=",
+            "RoverLunar.Scale::Value() - 0.1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::Value"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            "<=",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        }
+      ]
     }
   ],
   "layers": [
@@ -417,6 +639,10 @@
     {
       "name": "Scale",
       "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     }
   ]
 }
