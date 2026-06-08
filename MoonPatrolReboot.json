@@ -194,6 +194,14 @@
         "name": "NewSprite2",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Rover.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"Rover.png\",\"extension\":\".png\"}",
+        "name": "Rover.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },

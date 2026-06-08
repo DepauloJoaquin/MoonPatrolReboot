@@ -178,7 +178,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "RoverLunar",
+                  "image": "Rover.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -194,20 +194,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 15,
+                        "y": 1
                       },
                       {
-                        "x": 64,
-                        "y": 0
+                        "x": 48,
+                        "y": 1
                       },
                       {
-                        "x": 64,
-                        "y": 64
+                        "x": 48,
+                        "y": 58
                       },
                       {
-                        "x": 0,
-                        "y": 64
+                        "x": 15,
+                        "y": 58
                       }
                     ]
                   ]
