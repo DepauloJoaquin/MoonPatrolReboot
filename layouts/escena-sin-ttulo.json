@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7207380019718784,
+    "zoomFactor": 0.41013368726025246,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -130,6 +130,39 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 160,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Temperatura",
+      "persistentUuid": "b4d37f63-aa4f-4ee2-8baf-27193b07ad64",
+      "width": 197,
+      "x": 803,
+      "y": 0,
+      "zOrder": 10004,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ContadorFrames",
+      "persistentUuid": "734acf7c-48d4-4cb2-a41a-85479a99a235",
+      "width": 0,
+      "x": 280,
+      "y": 0,
+      "zOrder": 10005,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -155,6 +188,31 @@
       "variables": [
         {
           "name": "estaSaltando",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "TiempoDeCambioDeCarril_Segundos_",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "TiempoTurbo",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "Temperatura",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ContadorFrames",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Esta_Sobrecalentado",
           "type": "boolean",
           "value": false
         }
@@ -279,6 +337,94 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Temperatura",
+      "persistentUuid": "adba5f25-9871-49c1-a991-53162964d5c4",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Text",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 100,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Text",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 100,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "ContadorFrames",
+      "persistentUuid": "329d825b-d6e3-4afa-be62-d2dd321f175b",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Text",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 100,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Text",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 100,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -289,6 +435,12 @@
       },
       {
         "objectName": "RoverLunar"
+      },
+      {
+        "objectName": "Temperatura"
+      },
+      {
+        "objectName": "ContadorFrames"
       },
       {
         "objectName": "LineasSeparadoras"
@@ -325,6 +477,28 @@
             "Camino",
             "-",
             "300 * TimeDelta()"
+          ]
+        },
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "Temperatura",
+            "Text",
+            "=",
+            "ToString(round(RoverLunar.Temperatura))"
+          ]
+        },
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "ContadorFrames",
+            "Text",
+            "=",
+            "RoverLunar.Esta_Sobrecalentado"
           ]
         }
       ]
@@ -551,16 +725,15 @@
       ]
     },
     {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Funcionalidad Movimiento del Rover"
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Funcionalidad Movimiento del Rover",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [],
+      "parameters": []
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -625,16 +798,9 @@
             "\"MoverIzquierda\"",
             "RoverLunar.X() - 240",
             "\"easeOutQuad\"",
-            "TiempoDeCambioDeCarril_Segundos_",
+            "RoverLunar.TiempoDeCambioDeCarril_Segundos_",
             ""
           ]
-        }
-      ],
-      "variables": [
-        {
-          "name": "TiempoDeCambioDeCarril_Segundos_",
-          "type": "number",
-          "value": 0.2
         }
       ]
     },
@@ -701,16 +867,258 @@
             "\"MoverDerecha\"",
             "RoverLunar.X() + 240",
             "\"easeOutQuad\"",
-            "TiempoDeCambioDeCarril_Segundos_",
+            "RoverLunar.TiempoDeCambioDeCarril_Segundos_",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Funcionalidad Turbo del Rover",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Detectar tecla del turbo"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextJustPressed"
+          },
+          "parameters": [
+            "",
+            "\"LShift\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
+            "False",
             ""
           ]
         }
       ],
-      "variables": [
+      "actions": [
         {
-          "name": "TiempoDeCambioDeCarril_Segundos_",
-          "type": "number",
-          "value": 0.2
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "5",
+            "\"TiempoTurbo\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Aplico el turbo (Sub evento para que la temperatura no se eleve tan rápido)"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"TiempoTurbo\"",
+            "<=",
+            "RoverLunar.TiempoTurbo"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TiledSpriteObject::YOffset"
+          },
+          "parameters": [
+            "Camino",
+            "-",
+            "300 * TimeDelta()"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "ContadorFrames",
+            "+",
+            "1"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "ContadorFrames",
+                ">=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Temperatura",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "ContadorFrames",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Regreso el desplazamiento a la normalidad"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"TiempoTurbo\"",
+            ">=",
+            "RoverLunar.TiempoTurbo"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TiledSpriteObject::YOffset"
+          },
+          "parameters": [
+            "Camino",
+            "+",
+            "TimeDelta()"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Enfrio la temperatura del rover todo el tiempo"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Temperatura",
+            ">",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "ContadorFrames",
+            "<",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Temperatura",
+            "-",
+            "0.2"
+          ]
         }
       ]
     },
@@ -811,6 +1219,10 @@
     {
       "name": "Scale",
       "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
     },
     {
       "name": "Tween",
