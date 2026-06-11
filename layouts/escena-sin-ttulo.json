@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7207380019718784,
+    "zoomFactor": 0.5347489040883334,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -157,6 +157,11 @@
           "name": "estaSaltando",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "puedeDisparar",
+          "type": "boolean",
+          "value": true
         }
       ],
       "effects": [],
@@ -279,6 +284,68 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Bala",
+      "persistentUuid": "dbf23ce6-7c65-48dd-a6a6-ce8e4acec408",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "SpriteDisparoPrevisional",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpriteDisparoPrevisional",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 19,
+                        "y": 15
+                      },
+                      {
+                        "x": 45,
+                        "y": 15
+                      },
+                      {
+                        "x": 45,
+                        "y": 55
+                      },
+                      {
+                        "x": 19,
+                        "y": 55
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -292,6 +359,9 @@
       },
       {
         "objectName": "LineasSeparadoras"
+      },
+      {
+        "objectName": "Bala"
       }
     ]
   },
@@ -718,6 +788,192 @@
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Funcionalidad Disparo del Rover",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"e\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverDerecha\""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Tween::IsPlaying"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Tween",
+            "\"MoverIzquierda\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "puedeDisparar",
+            "True",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownDisparo\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"TiempoVidaBala\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "puedeDisparar",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Bala",
+            "RoverLunar.CenterX()",
+            "RoverLunar.CenterY() - 20",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AddForceXY"
+          },
+          "parameters": [
+            "Bala",
+            "0",
+            "- (Velocidad_disparo)",
+            "1"
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "Velocidad_disparo",
+          "type": "number",
+          "value": 500
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"TiempoVidaBala\"",
+            ">=",
+            "1.2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "Bala",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownDisparo\"",
+            ">=",
+            "5"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "puedeDisparar",
+            "True",
+            ""
+          ]
+        }
+      ]
     }
   ],
   "layers": [

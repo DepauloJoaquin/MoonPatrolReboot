@@ -202,6 +202,14 @@
         "name": "Rover.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/SpriteDisparoPrevisional.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpriteDisparoPrevisional",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -222,6 +230,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/parallax"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/advancedprojectile"
     }
   ],
   "externalLayouts": []
