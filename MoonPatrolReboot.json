@@ -202,6 +202,60 @@
         "name": "Rover.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Rain.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Rain.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/7a335da0136a4a4aa158c6001348e99f6b208400b90a0535f0c981005e29d994_Rain.png",
+          "name": "Rain.png"
+        }
+      },
+      {
+        "file": "assets/Power Up 2.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "44fae64462ce8948d429760b6fe7c7dedecd24f321c657d0468ef9cb44c0a395_Power Up 2.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Space Shooter by Pixel boy/Sound/44fae64462ce8948d429760b6fe7c7dedecd24f321c657d0468ef9cb44c0a395_Power Up 2.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Random 8.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "6b1f1eb50ad4c5ccfe13d9200b6bdca1dcbe87f58f93b54607b900101cfe7299_Random 8.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Random/6b1f1eb50ad4c5ccfe13d9200b6bdca1dcbe87f58f93b54607b900101cfe7299_Random 8.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Death.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "95fe7f6a064b3e17dce2774ad92cee83f877d2d6dda1cd16d79b876ca572911c_Death.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Space Shooter by Pixel boy/Sound/95fe7f6a064b3e17dce2774ad92cee83f877d2d6dda1cd16d79b876ca572911c_Death.aac",
+          "name": "gdevelop-asset-store"
+        }
       }
     ]
   },

@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.41013368726025246,
+    "zoomFactor": 0.5449810500781221,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -61,7 +61,7 @@
       "persistentUuid": "1e127e96-0ff8-49cd-8005-1283cfedf751",
       "width": 720,
       "x": 280,
-      "y": -1,
+      "y": 0,
       "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
@@ -141,8 +141,8 @@
       "name": "Temperatura",
       "persistentUuid": "b4d37f63-aa4f-4ee2-8baf-27193b07ad64",
       "width": 197,
-      "x": 803,
-      "y": 0,
+      "x": 1088,
+      "y": 60,
       "zOrder": 10004,
       "numberProperties": [],
       "stringProperties": [],
@@ -154,12 +154,60 @@
       "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "ContadorFrames",
+      "name": "Sobrecalentamiento",
       "persistentUuid": "734acf7c-48d4-4cb2-a41a-85479a99a235",
       "width": 0,
-      "x": 280,
-      "y": 0,
+      "x": 10,
+      "y": 50,
       "zOrder": 10005,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Temperatura_Titulo",
+      "persistentUuid": "ac2f7bdd-2b92-4ba1-9802-92f95b2139db",
+      "width": 0,
+      "x": 1050,
+      "y": 6,
+      "zOrder": 10006,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Sobrecalentamiento_Texto",
+      "persistentUuid": "071aac5e-bff5-4334-a5ed-64ec886bd398",
+      "width": 0,
+      "x": 5,
+      "y": 0,
+      "zOrder": 10007,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BasicFlame",
+      "persistentUuid": "a66e08e0-a421-4d67-abcd-0d51ba71a0f4",
+      "width": 0,
+      "x": 640,
+      "y": 620,
+      "zOrder": 10008,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -197,7 +245,12 @@
           "value": 0.2
         },
         {
-          "name": "TiempoTurbo",
+          "name": "DuracionMaximaTurbo",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "Penalizacion_Sobrecalentamiento",
           "type": "number",
           "value": 2
         },
@@ -207,7 +260,7 @@
           "value": 0
         },
         {
-          "name": "ContadorFrames",
+          "name": "Ticks_Para_Calentar",
           "type": "number",
           "value": 0
         },
@@ -386,7 +439,7 @@
       "assetStoreId": "",
       "bold": false,
       "italic": false,
-      "name": "ContadorFrames",
+      "name": "Sobrecalentamiento",
       "persistentUuid": "329d825b-d6e3-4afa-be62-d2dd321f175b",
       "smoothed": true,
       "type": "TextObject::Text",
@@ -425,6 +478,147 @@
         "lineHeight": 0,
         "color": "0;0;0"
       }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Temperatura_Titulo",
+      "persistentUuid": "48295d4f-6bd4-46e0-97f9-1992239bdd8c",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Temperatura",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 40,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Temperatura",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 40,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Sobrecalentamiento_Texto",
+      "persistentUuid": "e1916496-0362-4a79-ae1a-ac712a2134c9",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Sobrecalentamiento\n",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 40,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Sobrecalentamiento\n",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 40,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "additive": false,
+      "assetStoreId": "ee9e34df96c454414c9236df0d3a721e60b9a34cca8f123ecbefcd58a6671833",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 1,
+      "emitterForceMax": 300,
+      "emitterForceMin": 200,
+      "flow": 100,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 300,
+      "name": "BasicFlame",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 40,
+      "particleBlue2": 0,
+      "particleColor1": "255;122;40",
+      "particleColor2": "255;0;0",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 122,
+      "particleGreen2": 0,
+      "particleLifeTimeMax": 1,
+      "particleLifeTimeMin": 0.2,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 100,
+      "particleSize2": 0,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "1212d79e-eb47-4f6a-a413-31c160c44cb5",
+      "rendererParam1": 25,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 3,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -440,10 +634,19 @@
         "objectName": "Temperatura"
       },
       {
-        "objectName": "ContadorFrames"
+        "objectName": "Sobrecalentamiento_Texto"
+      },
+      {
+        "objectName": "Temperatura_Titulo"
+      },
+      {
+        "objectName": "Sobrecalentamiento"
       },
       {
         "objectName": "LineasSeparadoras"
+      },
+      {
+        "objectName": "BasicFlame"
       }
     ]
   },
@@ -495,7 +698,7 @@
             "value": "TextContainerCapability::TextContainerBehavior::SetValue"
           },
           "parameters": [
-            "ContadorFrames",
+            "Sobrecalentamiento",
             "Text",
             "=",
             "RoverLunar.Esta_Sobrecalentado"
@@ -504,9 +707,38 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Inicio un temporizador para el cooldown del turbo"
+    },
+    {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "conditions": [
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CronometroRecargaTurbo\""
+          ]
+        }
+      ]
     },
     {
       "colorB": 228,
@@ -801,6 +1033,20 @@
             "RoverLunar.TiempoDeCambioDeCarril_Segundos_",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+          },
+          "parameters": [
+            "BasicFlame",
+            "Tween",
+            "\"MoverIzquierda\"",
+            "BasicFlame.X() - 240",
+            "\"easeOutQuad\"",
+            "RoverLunar.TiempoDeCambioDeCarril_Segundos_",
+            ""
+          ]
         }
       ]
     },
@@ -870,6 +1116,20 @@
             "RoverLunar.TiempoDeCambioDeCarril_Segundos_",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+          },
+          "parameters": [
+            "BasicFlame",
+            "Tween",
+            "\"MoverDerecha\"",
+            "BasicFlame.X() + 240",
+            "\"easeOutQuad\"",
+            "RoverLunar.TiempoDeCambioDeCarril_Segundos_",
+            ""
+          ]
         }
       ]
     },
@@ -923,6 +1183,17 @@
             "False",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CronometroRecargaTurbo\"",
+            ">=",
+            "3"
+          ]
         }
       ],
       "actions": [
@@ -932,7 +1203,28 @@
           },
           "parameters": [
             "5",
-            "\"TiempoTurbo\""
+            "\"CronometroTurboActivo\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CronometroRecargaTurbo\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "44fae64462ce8948d429760b6fe7c7dedecd24f321c657d0468ef9cb44c0a395_Power Up 2.aac",
+            "",
+            "100",
+            "1"
           ]
         }
       ]
@@ -958,9 +1250,9 @@
           },
           "parameters": [
             "",
-            "\"TiempoTurbo\"",
+            "\"CronometroTurboActivo\"",
             "<=",
-            "RoverLunar.TiempoTurbo"
+            "RoverLunar.DuracionMaximaTurbo"
           ]
         }
       ],
@@ -981,9 +1273,18 @@
           },
           "parameters": [
             "RoverLunar",
-            "ContadorFrames",
+            "Ticks_Para_Calentar",
             "+",
             "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "ParticleSystem::ParticleEmitter::SetAdditiveRendering"
+          },
+          "parameters": [
+            "BasicFlame",
+            "yes"
           ]
         }
       ],
@@ -997,7 +1298,7 @@
               },
               "parameters": [
                 "RoverLunar",
-                "ContadorFrames",
+                "Ticks_Para_Calentar",
                 ">=",
                 "2"
               ]
@@ -1021,7 +1322,7 @@
               },
               "parameters": [
                 "RoverLunar",
-                "ContadorFrames",
+                "Ticks_Para_Calentar",
                 "=",
                 "0"
               ]
@@ -1051,9 +1352,9 @@
           },
           "parameters": [
             "",
-            "\"TiempoTurbo\"",
+            "\"CronometroTurboActivo\"",
             ">=",
-            "RoverLunar.TiempoTurbo"
+            "RoverLunar.DuracionMaximaTurbo"
           ]
         }
       ],
@@ -1066,6 +1367,15 @@
             "Camino",
             "+",
             "TimeDelta()"
+          ]
+        },
+        {
+          "type": {
+            "value": "ParticleSystem::ParticleEmitter::SetAdditiveRendering"
+          },
+          "parameters": [
+            "BasicFlame",
+            "no"
           ]
         }
       ]
@@ -1102,7 +1412,7 @@
           },
           "parameters": [
             "RoverLunar",
-            "ContadorFrames",
+            "Ticks_Para_Calentar",
             "<",
             "2"
           ]
@@ -1123,9 +1433,135 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Aplico sobrecalentamiento"
+    },
+    {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Temperatura",
+            ">=",
+            "100"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
+            "True",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Temperatura",
+            "<",
+            "100"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "RoverLunar.Penalizacion_Sobrecalentamiento"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
+            "False",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "95fe7f6a064b3e17dce2774ad92cee83f877d2d6dda1cd16d79b876ca572911c_Death.aac",
+            "",
+            "100",
+            "1"
+          ]
+        }
+      ]
     }
   ],
   "layers": [
