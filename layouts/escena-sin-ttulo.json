@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7207380019718784,
+    "zoomFactor": 0.6744834633254322,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -127,6 +127,22 @@
       "x": 1000,
       "y": 0,
       "zOrder": 10003,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Texto_temperatura",
+      "persistentUuid": "d6da3a45-cf02-4a3b-8ed3-a7929a607d38",
+      "width": 0,
+      "x": 1021,
+      "y": 71,
+      "zOrder": 10004,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -423,6 +439,50 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Texto_temperatura",
+      "persistentUuid": "3bc15dae-6e12-4b97-9024-29ac21edc1eb",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Temperatura: ",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Temperatura: ",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -442,6 +502,9 @@
       },
       {
         "objectName": "DisparoFuerte"
+      },
+      {
+        "objectName": "Texto_temperatura"
       }
     ]
   },
@@ -961,6 +1024,15 @@
             "=",
             "0"
           ]
+        },
+        {
+          "type": {
+            "value": "ChangeColor"
+          },
+          "parameters": [
+            "RoverLunar",
+            "\"255;50;50\""
+          ]
         }
       ]
     },
@@ -1039,6 +1111,15 @@
                 "Bloqueado",
                 "False",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "RoverLunar",
+                "\"255;255;255\""
               ]
             }
           ]
@@ -1187,6 +1268,23 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "Texto_temperatura",
+            "Text",
+            "=",
+            "\"Temperatura: \"+ ToString(trunc(RoverLunar.Temperatura))"
+          ]
+        }
+      ]
     }
   ],
   "layers": [
@@ -1280,6 +1378,10 @@
     {
       "name": "Scale",
       "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
     },
     {
       "name": "Tween",
