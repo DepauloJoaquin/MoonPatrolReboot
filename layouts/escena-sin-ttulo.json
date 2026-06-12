@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.5449810500781221,
+    "zoomFactor": 1.5236183219919042,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -207,7 +207,7 @@
       "width": 0,
       "x": 640,
       "y": 620,
-      "zOrder": 10008,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -615,6 +615,12 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": false,
+          "IsDestroyedWithParent": false
+        },
+        {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
         }
@@ -702,6 +708,17 @@
             "Text",
             "=",
             "RoverLunar.Esta_Sobrecalentado"
+          ]
+        },
+        {
+          "type": {
+            "value": "Sticker::Sticker::Stick"
+          },
+          "parameters": [
+            "BasicFlame",
+            "Sticker",
+            "RoverLunar",
+            ""
           ]
         }
       ]
@@ -1170,7 +1187,7 @@
           },
           "parameters": [
             "",
-            "\"LShift\""
+            "\"i\""
           ]
         },
         {
@@ -1286,6 +1303,16 @@
             "BasicFlame",
             "yes"
           ]
+        },
+        {
+          "type": {
+            "value": "SetZOrder"
+          },
+          "parameters": [
+            "BasicFlame",
+            "=",
+            "10008"
+          ]
         }
       ],
       "events": [
@@ -1376,6 +1403,16 @@
           "parameters": [
             "BasicFlame",
             "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetZOrder"
+          },
+          "parameters": [
+            "BasicFlame",
+            "=",
+            "0"
           ]
         }
       ]
@@ -1494,8 +1531,19 @@
           "parameters": [
             "RoverLunar",
             "Temperatura",
-            "<",
-            "100"
+            ">=",
+            "-1"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Temperatura",
+            "<=",
+            "1"
           ]
         },
         {
@@ -1506,14 +1554,6 @@
         }
       ],
       "actions": [
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "RoverLunar.Penalizacion_Sobrecalentamiento"
-          ]
-        },
         {
           "type": {
             "value": "SetBooleanObjectVariable"
@@ -1655,6 +1695,10 @@
     {
       "name": "Scale",
       "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Sticker",
+      "type": "Sticker::Sticker"
     },
     {
       "name": "Text",
