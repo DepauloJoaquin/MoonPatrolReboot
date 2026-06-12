@@ -9,7 +9,7 @@
   "title": "",
   "v": 249,
   "uiSettings": {
-    "grid": true,
+    "grid": false,
     "gridType": "rectangular",
     "gridWidth": 80,
     "gridHeight": 80,
@@ -19,8 +19,8 @@
     "gridOffsetZ": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
-    "snap": true,
-    "zoomFactor": 0.7207380019718784,
+    "snap": false,
+    "zoomFactor": 0.6106074988457124,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -29,6 +29,11 @@
   "variables": [
     {
       "name": "EnJuego",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "tieneDelayDelEspacioParaElDobleSalto",
       "type": "boolean",
       "value": true
     }
@@ -130,6 +135,70 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 23,
+      "layer": "",
+      "name": "TextoCooldown",
+      "persistentUuid": "7297bbc4-0dcf-4e75-a9e5-4a7dd9ec8adf",
+      "width": 167,
+      "x": 33,
+      "y": 160,
+      "zOrder": 10005,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ContadorCooldown",
+      "persistentUuid": "07b9cb56-a815-4cd0-af0f-5cfbecb01937",
+      "width": 0,
+      "x": 225,
+      "y": 160,
+      "zOrder": 10008,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DuracionEscudo",
+      "persistentUuid": "79ff5726-4453-40ea-92c9-1088cb4cd46e",
+      "width": 0,
+      "x": 38,
+      "y": 196,
+      "zOrder": 10009,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ContadorEscudo",
+      "persistentUuid": "2edb6729-35ea-4c99-8a60-5958826e179b",
+      "width": 0,
+      "x": 220,
+      "y": 199,
+      "zOrder": 10010,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -157,9 +226,57 @@
           "name": "estaSaltando",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "numeroDeSaltos",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "escalaLímiteMáximo",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "escalaLímiteMínimo",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tieneDobleSalto",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "cooldownEscudo",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "duracionEscudo",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "puedeUsarEscudo",
+          "type": "boolean",
+          "value": true
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Escudo",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 10
+          },
+          "stringParameters": {
+            "color": "192;148;214"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [
         {
           "name": "Tween",
@@ -279,6 +396,244 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "ContadorCooldown",
+      "persistentUuid": "be9b73d4-5406-4275-a388-1f4d7484ddb1",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "0",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "0",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TextoCooldown",
+      "persistentUuid": "b8dffd8c-114a-4515-af41-9e91aa34d93e",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "CooldownEscudo :",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "CooldownEscudo :",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "DuracionEscudo",
+      "persistentUuid": "565475bf-4a77-4ccb-a9de-b8bb18cdc65c",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "DuracionEscudo :",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "DuracionEscudo :",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "ContadorEscudo",
+      "persistentUuid": "01fd1a47-8962-4c6b-b885-4827822b2e0d",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "0",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "0",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "NewSprite",
+      "persistentUuid": "7d8dfcae-7061-4b5d-9af2-209859f682ee",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 13,
+                        "y": 13
+                      },
+                      {
+                        "x": 50,
+                        "y": 13
+                      },
+                      {
+                        "x": 50,
+                        "y": 50
+                      },
+                      {
+                        "x": 13,
+                        "y": 50
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -291,7 +646,22 @@
         "objectName": "RoverLunar"
       },
       {
+        "objectName": "NewSprite"
+      },
+      {
+        "objectName": "ContadorCooldown"
+      },
+      {
+        "objectName": "TextoCooldown"
+      },
+      {
         "objectName": "LineasSeparadoras"
+      },
+      {
+        "objectName": "DuracionEscudo"
+      },
+      {
+        "objectName": "ContadorEscudo"
       }
     ]
   },
@@ -372,6 +742,17 @@
       "actions": [
         {
           "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "numeroDeSaltos",
+            "+",
+            "1"
+          ]
+        },
+        {
+          "type": {
             "value": "SetBooleanObjectVariable"
           },
           "parameters": [
@@ -390,7 +771,45 @@
             "\"tiempoSalto\""
           ]
         }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.25"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "tieneDelayDelEspacioParaElDobleSalto",
+                "False",
+                ""
+              ]
+            }
+          ]
+        }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Salto"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -454,7 +873,7 @@
             "RoverLunar",
             "Scale",
             ">=",
-            "2"
+            "RoverLunar.escalaLímiteMáximo"
           ]
         }
       ],
@@ -471,6 +890,18 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Caída"
+    },
+    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -481,7 +912,7 @@
             "",
             "\"tiempoCaida\"",
             "<=",
-            "0.5"
+            "0.55"
           ]
         },
         {
@@ -492,7 +923,7 @@
             "RoverLunar",
             "Scale",
             ">=",
-            "1"
+            "RoverLunar.escalaLímiteMínimo"
           ]
         },
         {
@@ -532,7 +963,7 @@
             "RoverLunar",
             "Scale",
             "<=",
-            "1"
+            "RoverLunar.escalaLímiteMínimo"
           ]
         }
       ],
@@ -545,6 +976,38 @@
             "RoverLunar",
             "estaSaltando",
             "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "numeroDeSaltos",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "escalaLímiteMáximo",
+            "=",
+            "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanVariable"
+          },
+          "parameters": [
+            "tieneDelayDelEspacioParaElDobleSalto",
+            "True",
             ""
           ]
         }
@@ -717,7 +1180,420 @@
     {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Evite de doble salto"
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneDobleSalto",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "numeroDeSaltos",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextJustPressed"
+          },
+          "parameters": [
+            "",
+            "\"Space\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "tieneDelayDelEspacioParaElDobleSalto",
+            "=",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "numeroDeSaltos",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "escalaLímiteMáximo",
+                "=",
+                "2.5 + TimerElapsedTime(\"tiempoCaida\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveTimer"
+              },
+              "parameters": [
+                "",
+                "\"tiempoCaida\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"tiempoSalto\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.75"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"tiempoCaida\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "numeroDeSaltos",
+            ">=",
+            "2"
+          ]
+        }
+      ],
       "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Escudo"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "EffectCapability::EffectBehavior::EnableEffect"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Effect",
+            "\"Escudo\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextJustPressed"
+          },
+          "parameters": [
+            "",
+            "\"l\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "puedeUsarEscudo",
+            "True",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "EffectCapability::EffectBehavior::EnableEffect"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Effect",
+            "\"Escudo\"",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "puedeUsarEscudo",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"cooldownEscudo\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoDeUsoEscudo\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "../shield-4.mp3",
+            "",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoDeUsoEscudo\"",
+            ">=",
+            "RoverLunar.duracionEscudo"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "puedeUsarEscudo",
+            "=",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "EffectCapability::EffectBehavior::EnableEffect"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Effect",
+            "\"Escudo\"",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "RemoveTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoDeUsoEscudo\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "iphone-low-battery.mp3",
+            "",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"cooldownEscudo\"",
+            ">=",
+            "RoverLunar.cooldownEscudo"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "puedeUsarEscudo",
+            "=",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "puedeUsarEscudo",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "RemoveTimer"
+          },
+          "parameters": [
+            "",
+            "\"cooldownEscudo\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "ContadorCooldown",
+            "Text",
+            "=",
+            "ToString(round(TimerElapsedTime(\"cooldownEscudo\")))"
+          ]
+        },
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "ContadorEscudo",
+            "Text",
+            "=",
+            "ToString(round(TimerElapsedTime(\"tiempoDeUsoEscudo\")))"
+          ]
+        }
+      ]
     }
   ],
   "layers": [
@@ -811,6 +1687,10 @@
     {
       "name": "Scale",
       "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
     },
     {
       "name": "Tween",
