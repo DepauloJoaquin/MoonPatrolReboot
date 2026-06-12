@@ -202,6 +202,62 @@
         "name": "Rover.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Disparo.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Disparo",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Disparo2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Disparo2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite3.png\"}",
+        "name": "NewSprite3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DisparoFuerte.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "DisparoFuerte",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "DisparoCargado.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "DisparoCargado.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "disparo normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "disparo normal.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
