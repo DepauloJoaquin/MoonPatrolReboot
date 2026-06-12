@@ -33,9 +33,9 @@
       "value": true
     },
     {
-      "name": "tieneDelayDelEspacioParaElDobleSalto",
-      "type": "boolean",
-      "value": true
+      "name": "vecesEjecutado",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -265,6 +265,11 @@
           "name": "escalaLimiteMinimo",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "tieneDelayDeSalto",
+          "type": "boolean",
+          "value": true
         }
       ],
       "effects": [],
@@ -551,30 +556,56 @@
             "\"tiempoSalto\""
           ]
         }
-      ],
-      "events": [
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "0.25"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "tieneDelayDelEspacioParaElDobleSalto",
-                "False",
-                ""
-              ]
-            }
+          "type": {
+            "value": "KeyFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"Space\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "0.15"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneDelayDeSalto",
+            "False",
+            ""
           ]
         }
       ]
@@ -704,7 +735,7 @@
             "",
             "\"tiempoCaida\"",
             "<=",
-            "0.55"
+            "0.5"
           ]
         },
         {
@@ -714,7 +745,7 @@
           "parameters": [
             "RoverLunar",
             "Scale",
-            ">=",
+            ">",
             "RoverLunar.escalaLimiteMinimo"
           ]
         },
@@ -754,7 +785,7 @@
           "parameters": [
             "RoverLunar",
             "Scale",
-            "<=",
+            "<",
             "RoverLunar.escalaLimiteMinimo"
           ]
         }
@@ -795,12 +826,24 @@
         },
         {
           "type": {
-            "value": "SetBooleanVariable"
+            "value": "SetBooleanObjectVariable"
           },
           "parameters": [
-            "tieneDelayDelEspacioParaElDobleSalto",
+            "RoverLunar",
+            "tieneDelayDeSalto",
             "True",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Scale",
+            "=",
+            "RoverLunar.escalaLimiteMinimo"
           ]
         }
       ]
@@ -864,21 +907,22 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "tieneDelayDeSalto",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
                 "value": "KeyFromTextPressed"
               },
               "parameters": [
                 "",
                 "\"Space\""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "tieneDelayDelEspacioParaElDobleSalto",
-                "False",
-                ""
               ]
             },
             {
@@ -913,7 +957,7 @@
                     "RoverLunar",
                     "escalaLimiteMaximo",
                     "=",
-                    "2.5 + TimerElapsedTime(\"tiempoCaida\")"
+                    "2 + TimerElapsedTime(\"tiempoSalto\")"
                   ]
                 },
                 {
@@ -957,19 +1001,7 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberObjectVariable"
-              },
-              "parameters": [
-                "RoverLunar",
-                "numeroDeSaltos",
-                ">=",
-                "2"
-              ]
-            }
-          ],
+          "conditions": [],
           "actions": []
         }
       ],
@@ -980,7 +1012,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "disabled": true,
       "name": "DEBUG",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1108,6 +1139,35 @@
                 "DebugText",
                 "=",
                 "4"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "DebugText",
+                "Text",
+                "=",
+                "ToString(RoverLunar.Scale::Value())"
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ZOrder"
+              },
+              "parameters": [
+                "DebugText",
+                "=",
+                "5"
               ]
             }
           ],
