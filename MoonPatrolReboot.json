@@ -204,6 +204,14 @@
         "userAdded": false
       },
       {
+        "file": "assets/SpriteDisparoPrevisional.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpriteDisparoPrevisional",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
         "file": "assets/NewSprite3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite3.png\"}",
@@ -258,6 +266,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/parallax"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/advancedprojectile"
     }
   ],
   "externalLayouts": []
