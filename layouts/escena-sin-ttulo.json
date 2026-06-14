@@ -286,14 +286,8 @@
       ],
       "behaviors": [
         {
-          "name": "escalaLimiteMinimo",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "tieneDelayDeSalto",
-          "type": "boolean",
-          "value": true
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ],
       "animations": [
@@ -1122,54 +1116,30 @@
           },
           "parameters": [
             "RoverLunar",
-            "numeroDeSaltos",
-            "+",
-            "1"
+            "Tween",
+            "\"MoverIzquierda\""
           ]
         },
         {
           "type": {
-            "value": "SetBooleanObjectVariable"
+            "inverted": true,
+            "value": "Tween::IsPlaying"
           },
           "parameters": [
             "RoverLunar",
-            "estaSaltando",
-            "True",
-            ""
+            "Tween",
+            "\"MoverDerecha\""
           ]
         },
         {
           "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"tiempoSalto\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextReleased"
-          },
-          "parameters": [
-            "",
-            "\"Space\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
+            "inverted": true,
+            "value": "PosX"
           },
           "parameters": [
             "RoverLunar",
-            "estaSaltando",
-            "True",
-            ""
+            "<=",
+            "364"
           ]
         },
         {
