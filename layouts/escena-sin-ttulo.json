@@ -11,10 +11,10 @@
   "uiSettings": {
     "grid": false,
     "gridType": "rectangular",
-    "gridWidth": 80,
-    "gridHeight": 80,
+    "gridWidth": 32,
+    "gridHeight": 32,
     "gridDepth": 32,
-    "gridOffsetX": 40,
+    "gridOffsetX": 0,
     "gridOffsetY": 0,
     "gridOffsetZ": 0,
     "gridColor": 10401023,
@@ -42,8 +42,8 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 1.058823529411765,
-      "height": 72,
+      "depth": 1,
+      "height": 68,
       "keepRatio": true,
       "layer": "",
       "name": "RoverLunar",
@@ -59,13 +59,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 15.062761506276152,
-      "height": 720,
+      "depth": 15,
+      "height": 717,
+      "keepRatio": true,
       "layer": "",
       "name": "Camino",
       "persistentUuid": "1e127e96-0ff8-49cd-8005-1283cfedf751",
-      "width": 720,
-      "x": 280,
+      "width": 754,
+      "x": 253,
       "y": -1,
       "zOrder": 3,
       "numberProperties": [],
@@ -76,13 +77,14 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 720,
+      "height": 719,
+      "keepRatio": true,
       "layer": "",
       "name": "LineasSeparadoras",
       "persistentUuid": "d1f9aa13-90a5-4a05-b23d-70147e2d4a05",
       "width": 8,
-      "x": 756,
-      "y": 0,
+      "x": 748,
+      "y": -1,
       "zOrder": 10001,
       "numberProperties": [],
       "stringProperties": [],
@@ -92,13 +94,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 2,
-      "height": 720,
+      "height": 718,
       "layer": "",
       "name": "LineasSeparadoras",
       "persistentUuid": "d0d7314d-5b15-4447-b2ec-5d39bec65edd",
       "width": 8,
-      "x": 516,
-      "y": 0,
+      "x": 493,
+      "y": 1,
       "zOrder": 10002,
       "numberProperties": [],
       "stringProperties": [],
@@ -108,13 +110,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 720,
+      "height": 718,
       "layer": "",
       "name": "LineasSeparadoras",
       "persistentUuid": "94cd7e28-f549-48ea-a926-c7da376ab603",
       "width": 8,
-      "x": 272,
-      "y": 0,
+      "x": 246,
+      "y": -2,
       "zOrder": 10003,
       "numberProperties": [],
       "stringProperties": [],
@@ -124,13 +126,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 720,
+      "height": 718,
       "layer": "",
       "name": "LineasSeparadoras",
       "persistentUuid": "ded92673-a0c5-462c-8be1-f72d5a71ccbf",
       "width": 8,
-      "x": 1000,
-      "y": 0,
+      "x": 999,
+      "y": -3,
       "zOrder": 10003,
       "numberProperties": [],
       "stringProperties": [],
@@ -284,8 +286,14 @@
       ],
       "behaviors": [
         {
-          "name": "Tween",
-          "type": "Tween::TweenBehavior"
+          "name": "escalaLimiteMinimo",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tieneDelayDeSalto",
+          "type": "boolean",
+          "value": true
         }
       ],
       "animations": [
@@ -1114,30 +1122,54 @@
           },
           "parameters": [
             "RoverLunar",
-            "Tween",
-            "\"MoverIzquierda\""
+            "numeroDeSaltos",
+            "+",
+            "1"
           ]
         },
         {
           "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
+            "value": "SetBooleanObjectVariable"
           },
           "parameters": [
             "RoverLunar",
-            "Tween",
-            "\"MoverDerecha\""
+            "estaSaltando",
+            "True",
+            ""
           ]
         },
         {
           "type": {
-            "inverted": true,
-            "value": "PosX"
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"tiempoSalto\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"Space\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
           },
           "parameters": [
             "RoverLunar",
-            "<=",
-            "364"
+            "estaSaltando",
+            "True",
+            ""
           ]
         },
         {
