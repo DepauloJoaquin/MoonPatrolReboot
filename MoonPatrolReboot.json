@@ -246,6 +246,22 @@
         "name": "NewSprite4",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "../MoonPatrolReboot_Merges/disparo normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "../MoonPatrolReboot_Merges/disparo normal.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "../MoonPatrolReboot_Merges/DisparoCargado.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "../MoonPatrolReboot_Merges/DisparoCargado.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },

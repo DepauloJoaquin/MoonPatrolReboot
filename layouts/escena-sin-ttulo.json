@@ -268,6 +268,21 @@
           "name": "puedeDisparar",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "Bloqueado",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CargaActual",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Temperatura",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -703,6 +718,130 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "DIsparo",
+      "persistentUuid": "e2b17a4b-cd7e-4651-ad71-d7031d9e1022",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "../MoonPatrolReboot_Merges/disparo normal.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 12,
+                        "y": 0
+                      },
+                      {
+                        "x": 12,
+                        "y": 16
+                      },
+                      {
+                        "x": 4,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "DisparoFuerte",
+      "persistentUuid": "ba2c4204-ad39-4bf8-8bd0-fbd60f2bc30b",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "DisparoFuerte",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "../MoonPatrolReboot_Merges/DisparoCargado.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 0
+                      },
+                      {
+                        "x": 25,
+                        "y": 0
+                      },
+                      {
+                        "x": 25,
+                        "y": 32
+                      },
+                      {
+                        "x": 6,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -734,6 +873,12 @@
       },
       {
         "objectName": "ContadorEscudo"
+      },
+      {
+        "objectName": "DIsparo"
+      },
+      {
+        "objectName": "DisparoFuerte"
       }
     ]
   },
@@ -753,11 +898,6 @@
     {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
-      "actions": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
       "actions": [
         {
           "type": {
@@ -772,569 +912,39 @@
       ]
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
-    },
-    {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Funcionalidad de Salto de Rover",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
-      "events": [],
-      "parameters": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextJustPressed"
-          },
-          "parameters": [
-            "",
-            "\"Space\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "estaSaltando",
-            "False",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "numeroDeSaltos",
-            "+",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetBooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "estaSaltando",
-            "True",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"tiempoSalto\""
-          ]
-        }
-      ],
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+          "conditions": [
             {
               "type": {
-                "value": "Wait"
+                "value": "KeyFromTextJustPressed"
               },
               "parameters": [
-                "0.25"
+                "",
+                "\"Space\""
               ]
             },
             {
               "type": {
-                "value": "SetBooleanVariable"
+                "value": "BooleanObjectVariable"
               },
               "parameters": [
-                "tieneDelayDelEspacioParaElDobleSalto",
+                "RoverLunar",
+                "estaSaltando",
                 "False",
                 ""
               ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Salto"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"tiempoSalto\"",
-            "<=",
-            "0.75"
-          ]
-        },
-        {
-          "type": {
-            "value": "ScalableCapability::ScalableBehavior::Value"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Scale",
-            "<=",
-            "2"
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "estaSaltando",
-            "True",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ScalableCapability::ScalableBehavior::SetValue"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Scale",
-            "=",
-            "RoverLunar.Scale::Value() + 0.05"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "ScalableCapability::ScalableBehavior::Value"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Scale",
-            ">=",
-            "RoverLunar.escalaLímiteMáximo"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"tiempoCaida\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Caída"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"tiempoCaida\"",
-            "<=",
-            "0.55"
-          ]
-        },
-        {
-          "type": {
-            "value": "ScalableCapability::ScalableBehavior::Value"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Scale",
-            ">=",
-            "RoverLunar.escalaLímiteMínimo"
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "estaSaltando",
-            "True",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ScalableCapability::ScalableBehavior::SetValue"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Scale",
-            "=",
-            "RoverLunar.Scale::Value() - 0.1"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "ScalableCapability::ScalableBehavior::Value"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Scale",
-            "<=",
-            "RoverLunar.escalaLímiteMínimo"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetBooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "estaSaltando",
-            "False",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "numeroDeSaltos",
-            "=",
-            "0"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "escalaLímiteMáximo",
-            "=",
-            "2"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetBooleanVariable"
-          },
-          "parameters": [
-            "tieneDelayDelEspacioParaElDobleSalto",
-            "True",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Funcionalidad Movimiento del Rover"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"a\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverIzquierda\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverDerecha\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "PosX"
-          },
-          "parameters": [
-            "RoverLunar",
-            "<=",
-            "364"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverIzquierda\"",
-            "RoverLunar.X() - 240",
-            "\"easeOutQuad\"",
-            "TiempoDeCambioDeCarril_Segundos_",
-            ""
-          ]
-        }
-      ],
-      "variables": [
-        {
-          "name": "TiempoDeCambioDeCarril_Segundos_",
-          "type": "number",
-          "value": 0.2
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"d\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverDerecha\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverIzquierda\""
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "PosX"
-          },
-          "parameters": [
-            "RoverLunar",
-            ">=",
-            "844"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverDerecha\"",
-            "RoverLunar.X() + 240",
-            "\"easeOutQuad\"",
-            "TiempoDeCambioDeCarril_Segundos_",
-            ""
-          ]
-        }
-      ],
-      "variables": [
-        {
-          "name": "TiempoDeCambioDeCarril_Segundos_",
-          "type": "number",
-          "value": 0.2
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Evite de doble salto"
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "estaSaltando",
-            "True",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "tieneDobleSalto",
-            "True",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "NumberObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "numeroDeSaltos",
-            "=",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "KeyFromTextJustPressed"
-          },
-          "parameters": [
-            "",
-            "\"Space\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanVariable"
-          },
-          "parameters": [
-            "tieneDelayDelEspacioParaElDobleSalto",
-            "=",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          ],
           "actions": [
             {
               "type": {
@@ -1349,22 +959,13 @@
             },
             {
               "type": {
-                "value": "SetNumberObjectVariable"
+                "value": "SetBooleanObjectVariable"
               },
               "parameters": [
                 "RoverLunar",
-                "escalaLímiteMáximo",
-                "=",
-                "2.5 + TimerElapsedTime(\"tiempoCaida\")"
-              ]
-            },
-            {
-              "type": {
-                "value": "RemoveTimer"
-              },
-              "parameters": [
-                "",
-                "\"tiempoCaida\""
+                "estaSaltando",
+                "True",
+                ""
               ]
             },
             {
@@ -1375,15 +976,114 @@
                 "",
                 "\"tiempoSalto\""
               ]
-            },
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.25"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "tieneDelayDelEspacioParaElDobleSalto",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Salto"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
               "type": {
-                "value": "Wait"
+                "value": "CompareTimer"
               },
               "parameters": [
+                "",
+                "\"tiempoSalto\"",
+                "<=",
                 "0.75"
               ]
             },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::Value"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Scale",
+                "<=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "estaSaltando",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Scale",
+                "=",
+                "RoverLunar.Scale::Value() + 0.05"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::Value"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Scale",
+                ">=",
+                "RoverLunar.escalaLímiteMáximo"
+              ]
+            }
+          ],
+          "actions": [
             {
               "type": {
                 "value": "ResetTimer"
@@ -1394,464 +1094,1255 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+        },
         {
-          "type": {
-            "value": "NumberObjectVariable"
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
           },
-          "parameters": [
-            "RoverLunar",
-            "numeroDeSaltos",
-            ">=",
-            "2"
+          "comment": "Caída"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"tiempoCaida\"",
+                "<=",
+                "0.55"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::Value"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Scale",
+                ">=",
+                "RoverLunar.escalaLímiteMínimo"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "estaSaltando",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Scale",
+                "=",
+                "RoverLunar.Scale::Value() - 0.1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::Value"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Scale",
+                "<=",
+                "RoverLunar.escalaLímiteMínimo"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "estaSaltando",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "numeroDeSaltos",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "escalaLímiteMáximo",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "tieneDelayDelEspacioParaElDobleSalto",
+                "True",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Doble Salto\n"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "estaSaltando",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "tieneDobleSalto",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "numeroDeSaltos",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Space\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "tieneDelayDelEspacioParaElDobleSalto",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "numeroDeSaltos",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "escalaLímiteMáximo",
+                    "=",
+                    "2.5 + TimerElapsedTime(\"tiempoCaida\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"tiempoCaida\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"tiempoSalto\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.75"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"tiempoCaida\""
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
-      "actions": []
+      "parameters": []
     },
     {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "name": "Funcionalidad Disparo del Rover",
+      "folded": true,
+      "name": "Funcionalidad del Movimiento del Rover",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Funcionalidad Movimiento del Rover"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"a\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Tween",
+                "\"MoverIzquierda\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Tween",
+                "\"MoverDerecha\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "PosX"
+              },
+              "parameters": [
+                "RoverLunar",
+                "<=",
+                "364"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Tween",
+                "\"MoverIzquierda\"",
+                "RoverLunar.X() - 240",
+                "\"easeOutQuad\"",
+                "TiempoDeCambioDeCarril_Segundos_",
+                ""
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "TiempoDeCambioDeCarril_Segundos_",
+              "type": "number",
+              "value": 0.2
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"d\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Tween",
+                "\"MoverDerecha\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Tween",
+                "\"MoverIzquierda\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "PosX"
+              },
+              "parameters": [
+                "RoverLunar",
+                ">=",
+                "844"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Tween",
+                "\"MoverDerecha\"",
+                "RoverLunar.X() + 240",
+                "\"easeOutQuad\"",
+                "TiempoDeCambioDeCarril_Segundos_",
+                ""
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "TiempoDeCambioDeCarril_Segundos_",
+              "type": "number",
+              "value": 0.2
+            }
+          ]
+        }
+      ],
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Funcionalidad Disparo del Rover",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "KeyFromTextReleased"
-          },
-          "parameters": [
-            "",
-            "\"j\""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"j\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Tween",
+                "\"MoverDerecha\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Tween",
+                "\"MoverIzquierda\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "estaSaltando",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "puedeDisparar",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"CooldownDisparo\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"TiempoVidaBala\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "puedeDisparar",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Bala",
+                "RoverLunar.CenterX()",
+                "RoverLunar.CenterY() - 20",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceXY"
+              },
+              "parameters": [
+                "Bala",
+                "0",
+                "- (Velocidad_disparo)",
+                "1"
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "Velocidad_disparo",
+              "type": "number",
+              "value": 500
+            }
           ]
         },
         {
-          "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverDerecha\""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"TiempoVidaBala\"",
+                ">=",
+                "1.2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Bala",
+                ""
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "inverted": true,
-            "value": "Tween::IsPlaying"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Tween",
-            "\"MoverIzquierda\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "estaSaltando",
-            "False",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "puedeDisparar",
-            "True",
-            ""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"CooldownDisparo\"",
+                ">=",
+                "0.20"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "puedeDisparar",
+                "True",
+                ""
+              ]
+            }
           ]
         }
       ],
-      "actions": [
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Disparo  Cargado",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"CooldownDisparo\""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Bloqueado",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "CargaActual",
+                "+",
+                "120* TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Temperatura",
+                "+",
+                "40*TimeDelta()"
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"TiempoVidaBala\""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Temperatura",
+                ">=",
+                "100"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Bloqueado",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "CargaActual",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "RoverLunar",
+                "\"255;50;50\""
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "SetBooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "puedeDisparar",
-            "False",
-            ""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Temperatura",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Temperatura",
+                "-",
+                "25*TimeDelta()"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "Temperatura",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "Bloqueado",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "Bloqueado",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "\"255;255;255\""
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Bala",
-            "RoverLunar.CenterX()",
-            "RoverLunar.CenterY() - 20",
-            ""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Bloqueado",
+                "=",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "CargaActual",
+                    ">=",
+                    "80"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "DisparoFuerte",
+                    "RoverLunar.X()+20",
+                    "RoverLunar.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "DisparoFuerte",
+                    "270",
+                    "600",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "CargaActual",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "CargaActual",
+                    "<",
+                    "80"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "CargaActual",
+                    ">=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "DIsparo",
+                    "RoverLunar.X()+28",
+                    "RoverLunar.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "DIsparo",
+                    "270",
+                    "600",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "RoverLunar",
+                    "CargaActual",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "AddForceXY"
-          },
-          "parameters": [
-            "Bala",
-            "0",
-            "- (Velocidad_disparo)",
-            "1"
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Texto_temperatura",
+                "Text",
+                "=",
+                "\"Temperatura: \"+ ToString(trunc(RoverLunar.Temperatura))"
+              ]
+            }
           ]
         }
       ],
-      "variables": [
-        {
-          "name": "Velocidad_disparo",
-          "type": "number",
-          "value": 500
-        }
-      ]
+      "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Escudo",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"TiempoVidaBala\"",
-            ">=",
-            "1.2"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Effect",
+                "\"Escudo\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"l\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "puedeUsarEscudo",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Effect",
+                "\"Escudo\"",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "puedeUsarEscudo",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"cooldownEscudo\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"tiempoDeUsoEscudo\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "../shield-4.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"tiempoDeUsoEscudo\"",
+                ">=",
+                "RoverLunar.duracionEscudo"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "puedeUsarEscudo",
+                "=",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "RoverLunar",
+                "Effect",
+                "\"Escudo\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveTimer"
+              },
+              "parameters": [
+                "",
+                "\"tiempoDeUsoEscudo\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "iphone-low-battery.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"cooldownEscudo\"",
+                ">=",
+                "RoverLunar.cooldownEscudo"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "puedeUsarEscudo",
+                "=",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "RoverLunar",
+                "puedeUsarEscudo",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveTimer"
+              },
+              "parameters": [
+                "",
+                "\"cooldownEscudo\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "ContadorCooldown",
+                "Text",
+                "=",
+                "ToString(round(TimerElapsedTime(\"cooldownEscudo\")))"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "ContadorEscudo",
+                "Text",
+                "=",
+                "ToString(round(TimerElapsedTime(\"tiempoDeUsoEscudo\")))"
+              ]
+            }
           ]
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "Bala",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"CooldownDisparo\"",
-            ">=",
-            "0.20"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetBooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "puedeDisparar",
-            "True",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Escudo"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "EffectCapability::EffectBehavior::EnableEffect"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Effect",
-            "\"Escudo\"",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextJustPressed"
-          },
-          "parameters": [
-            "",
-            "\"l\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "puedeUsarEscudo",
-            "True",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "EffectCapability::EffectBehavior::EnableEffect"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Effect",
-            "\"Escudo\"",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetBooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "puedeUsarEscudo",
-            "False",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"cooldownEscudo\""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"tiempoDeUsoEscudo\""
-          ]
-        },
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "../shield-4.mp3",
-            "",
-            "",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"tiempoDeUsoEscudo\"",
-            ">=",
-            "RoverLunar.duracionEscudo"
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "puedeUsarEscudo",
-            "=",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "EffectCapability::EffectBehavior::EnableEffect"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Effect",
-            "\"Escudo\"",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "RemoveTimer"
-          },
-          "parameters": [
-            "",
-            "\"tiempoDeUsoEscudo\""
-          ]
-        },
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "iphone-low-battery.mp3",
-            "",
-            "",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"cooldownEscudo\"",
-            ">=",
-            "RoverLunar.cooldownEscudo"
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "puedeUsarEscudo",
-            "=",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetBooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "puedeUsarEscudo",
-            "True",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "RemoveTimer"
-          },
-          "parameters": [
-            "",
-            "\"cooldownEscudo\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-          },
-          "parameters": [
-            "ContadorCooldown",
-            "Text",
-            "=",
-            "ToString(round(TimerElapsedTime(\"cooldownEscudo\")))"
-          ]
-        },
-        {
-          "type": {
-            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-          },
-          "parameters": [
-            "ContadorEscudo",
-            "Text",
-            "=",
-            "ToString(round(TimerElapsedTime(\"tiempoDeUsoEscudo\")))"
-          ]
-        }
-      ]
+      "parameters": []
     }
   ],
   "layers": [
