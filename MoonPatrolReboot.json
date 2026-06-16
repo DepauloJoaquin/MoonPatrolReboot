@@ -262,6 +262,132 @@
         "name": "../MoonPatrolReboot_Merges/DisparoCargado.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "../MoonPatrolReboot_Merges/assets/Power Up 2.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "../MoonPatrolReboot_Merges/assets/Power Up 2.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "../MoonPatrolReboot_Merges/assets/Death.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "../MoonPatrolReboot_Merges/assets/Death.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Power Up 2.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/Power Up 2.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Death.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/Death.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/shield-4.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/shield-4.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/disparo normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/disparo normal.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DisparoCargado.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/DisparoCargado.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Dot Bar Blue Border2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Dot Bar Blue Border.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/aa81b97c3211cf1e7cd040b96f5409851e3f1141c496b064157588294f09e662_Dot Bar Blue Border.png",
+          "name": "Dot Bar Blue Border.png"
+        }
+      },
+      {
+        "file": "assets/Dot Bar Blue Fill Bar2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Dot Bar Blue Fill Bar.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/0f15d828199d38d229469b48c953574c22a34b8daeb8941f3eb40df01a8f7d22_Dot Bar Blue Fill Bar.png",
+          "name": "Dot Bar Blue Fill Bar.png"
+        }
+      },
+      {
+        "file": "assets/Rounded Square Red Fill Bar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Rounded Square Red Fill Bar.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/Kenney/6c24bc12b470979e1cf0d049652439a6d922a619cb9ff96724244e0c100cfbcb_Rounded Square Red Fill Bar.png",
+          "name": "Rounded Square Red Fill Bar.png"
+        }
+      },
+      {
+        "file": "assets/Rounded Square Transparent Border2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Rounded Square Transparent Border.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/Kenney/c46289cfc281466abbbcc54ed9fdf27435171f135ca45e3bc4da5ef6f9ac9ef4_Rounded Square Transparent Border.png",
+          "name": "Rounded Square Transparent Border.png"
+        }
+      },
+      {
+        "file": "assets/Rounded Square Yellow Fill Bar2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Rounded Square Yellow Fill Bar.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/Kenney/787adbbfd4d93e6a2f33d7b20115926d950e35c177ca2e699370ec02504c53be_Rounded Square Yellow Fill Bar.png",
+          "name": "Rounded Square Yellow Fill Bar.png"
+        }
       }
     ]
   },
@@ -286,6 +412,14 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/advancedprojectile"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/sticker"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/panelspritecontinuousbar"
     }
   ],
   "externalLayouts": []
