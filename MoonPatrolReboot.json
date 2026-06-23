@@ -202,8 +202,6 @@
         "name": "Rover.png",
         "smoothed": false,
         "userAdded": false
-<<<<<<< Updated upstream
-=======
       },
       {
         "file": "assets/NewSprite3.png",
@@ -400,7 +398,6 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
->>>>>>> Stashed changes
       }
     ]
   },

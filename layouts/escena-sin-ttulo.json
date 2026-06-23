@@ -19,13 +19,8 @@
     "gridOffsetZ": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
-<<<<<<< Updated upstream
-    "snap": true,
-    "zoomFactor": 0.7207380019718784,
-=======
     "snap": false,
     "zoomFactor": 0.5527808136442386,
->>>>>>> Stashed changes
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -135,8 +130,6 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
-<<<<<<< Updated upstream
-=======
     },
     {
       "angle": 0,
@@ -267,7 +260,6 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
->>>>>>> Stashed changes
     }
   ],
   "objects": [
@@ -295,8 +287,6 @@
           "name": "estaSaltando",
           "type": "boolean",
           "value": false
-<<<<<<< Updated upstream
-=======
         },
         {
           "name": "numeroDeSaltos",
@@ -393,7 +383,6 @@
           },
           "stringParameters": {},
           "booleanParameters": {}
->>>>>>> Stashed changes
         }
       ],
       "effects": [],
@@ -637,8 +626,6 @@
           ]
         }
       ]
-<<<<<<< Updated upstream
-=======
     },
     {
       "assetStoreId": "",
@@ -1191,7 +1178,6 @@
         "lineHeight": 0,
         "color": "208;2;27"
       }
->>>>>>> Stashed changes
     }
   ],
   "objectsFolderStructure": {
@@ -1204,9 +1190,6 @@
         "objectName": "RoverLunar"
       },
       {
-<<<<<<< Updated upstream
-        "objectName": "LineasSeparadoras"
-=======
         "objectName": "DisparoFuerte"
       },
       {
@@ -1241,7 +1224,6 @@
       },
       {
         "objectName": "AtencionControles"
->>>>>>> Stashed changes
       }
     ]
   },
@@ -1352,8 +1334,6 @@
             "\"tiempoSalto\""
           ]
         }
-<<<<<<< Updated upstream
-=======
       ]
     },
     {
@@ -1406,7 +1386,6 @@
             ""
           ]
         }
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1564,8 +1543,6 @@
             "False",
             ""
           ]
-<<<<<<< Updated upstream
-=======
         },
         {
           "type": {
@@ -1610,7 +1587,6 @@
             "=",
             "RoverLunar.escalaLímiteMínimo"
           ]
->>>>>>> Stashed changes
         }
       ]
     },
@@ -1809,9 +1785,6 @@
     {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
-<<<<<<< Updated upstream
-      "actions": []
-=======
       "actions": [],
       "events": [
         {
@@ -3189,7 +3162,6 @@
           ]
         }
       ]
->>>>>>> Stashed changes
     }
   ],
   "layers": [
@@ -3285,8 +3257,6 @@
       "type": "ScalableCapability::ScalableBehavior"
     },
     {
-<<<<<<< Updated upstream
-=======
       "name": "Sticker",
       "type": "Sticker::Sticker"
     },
@@ -3295,7 +3265,6 @@
       "type": "TextContainerCapability::TextContainerBehavior"
     },
     {
->>>>>>> Stashed changes
       "name": "Tween",
       "type": "Tween::TweenBehavior"
     }
