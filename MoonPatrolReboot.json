@@ -202,6 +202,205 @@
         "name": "Rover.png",
         "smoothed": false,
         "userAdded": false
+<<<<<<< Updated upstream
+=======
+      },
+      {
+        "file": "assets/NewSprite3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite3.png\"}",
+        "name": "NewSprite3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "../shield-4.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "../shield-4.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "iphone-low-battery.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "iphone-low-battery.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite4.png\"}",
+        "name": "NewSprite4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite5.png\"}",
+        "name": "NewSprite5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite6",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite7.png\"}",
+        "name": "NewSprite7",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Rover.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Rover",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Rover2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Rover2.png\"}",
+        "name": "Rover2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Rover3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Rover3.png\"}",
+        "name": "Rover3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Escudo.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Escudo",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/shield-4.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/shield-4.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/iphone-low-battery.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/iphone-low-battery.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/Power Up 2.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/Power Up 2.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/Death.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/Death.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Disparo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Disparo.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Disparo2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets/Disparo",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "SpriteDisparoPrevisional.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "SpriteDisparoPrevisional.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/tie-fighter-fire-1.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/tie-fighter-fire-1.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/stormtrooper-blaster-charge-1.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/stormtrooper-blaster-charge-1.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/w-dl-44-blaster-pistol.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/w-dl-44-blaster-pistol.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/20220731_Moon Patrol Theme - Metal Version.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/20220731_Moon Patrol Theme - Metal Version.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+>>>>>>> Stashed changes
       }
     ]
   },
@@ -222,6 +421,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/parallax"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/sticker"
     }
   ],
   "externalLayouts": []
