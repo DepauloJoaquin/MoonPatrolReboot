@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 270,
+    "build": 272,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -397,6 +397,70 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Crater2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Crater2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Crater.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "Crater.jpg",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Crater2.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "Crater2.jpg",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Crater3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Crater3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Crater3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Crater3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "SimboloAdvertenciaRojo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "SimboloAdvertenciaRojo.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "SimboloAdvertenciaRojo2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "SimboloAdvertenciaRojo2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SimboloAdvertenciaRojo2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SimboloAdvertenciaRojo2",
+        "smoothed": false,
         "userAdded": false
       }
     ]
