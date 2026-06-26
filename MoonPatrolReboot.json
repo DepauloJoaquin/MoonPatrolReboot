@@ -462,6 +462,38 @@
         "name": "SimboloAdvertenciaRojo2",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Crater4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Crater4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Crater5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Crater5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "SimboloAdvertenciaAmarillo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "SimboloAdvertenciaAmarillo.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SimboloAdvertenciaRojo3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SimboloAdvertenciaRojo3",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
