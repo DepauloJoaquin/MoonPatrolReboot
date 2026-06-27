@@ -454,6 +454,34 @@
         "name": "nave_roja2.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "MinaEspacial.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "MinaEspacial.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/impactoDeBala.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/impactoDeBala.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/destruccion1.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/destruccion1.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
