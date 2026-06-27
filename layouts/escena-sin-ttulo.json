@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.5527808136442386,
+    "zoomFactor": 0.3838126879016974,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -31,6 +31,16 @@
       "name": "EnJuego",
       "type": "boolean",
       "value": true
+    },
+    {
+      "name": "PosicionElegida",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "PosicionOcupada",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -260,6 +270,40 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 83,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Ovni",
+      "persistentUuid": "dd7c8f93-4ede-4d7d-ae4b-b5e2c5eb9b23",
+      "width": 105,
+      "x": -843,
+      "y": -349,
+      "zOrder": 10014,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 5,
+      "height": 715,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Espacio",
+      "persistentUuid": "2918be82-b412-4dae-bc5b-3e8e29cb7c1a",
+      "width": 1280,
+      "x": 2,
+      "y": 0,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -271,7 +315,78 @@
       "texture": "camino_pixel_4.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
-      "variables": [],
+      "variables": [
+        {
+          "name": "Carril",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Carril_Posicion",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "EnemigosCarril_0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "EnemigosCarril_1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "EnemigosCarril_2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Carril0_Posicion0_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril0_Posicion1_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril0_Posicion2_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril1_Posicion0_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril1_Posicion1_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril1_Posicion2_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril2_Posicion0_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril2_Posicion1_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril2_Posicion2_Ocupado",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": []
     },
@@ -372,17 +487,11 @@
           "name": "CargaActual",
           "type": "number",
           "value": 0
-        }
-      ],
-      "effects": [
+        },
         {
-          "effectType": "LightNight",
-          "name": "Escudo",
-          "doubleParameters": {
-            "opacity": 5
-          },
-          "stringParameters": {},
-          "booleanParameters": {}
+          "name": "Carril_Actual",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1178,6 +1287,189 @@
         "lineHeight": 0,
         "color": "208;2;27"
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Ovni",
+      "persistentUuid": "a0745dd6-88ec-4bbe-b5f0-22774706c3e3",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Carril",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "Carril_Posicion",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "Posicion_Ocupada",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "CurrentHealth": 0,
+          "MaxHealth": 100,
+          "DamageCooldown": 0,
+          "AllowOverHealing": false,
+          "IsHealthJustDamaged": false,
+          "DamageToBeApplied": 0,
+          "HitAtLeastOnce": false,
+          "ChanceToDodge": 0,
+          "IsJustDodged": false,
+          "HealToBeApplied": 0,
+          "HealthRegenRate": 0,
+          "HealthRegenDelay": 0,
+          "IsJustHealed": false,
+          "CurrentShieldPoints": 2.0247e-320,
+          "MaxShieldPoints": 0,
+          "ShieldDuration": 5,
+          "ShieldRegenRate": 0,
+          "BlockExcessDamage": false,
+          "ShieldRegenDelay": 0,
+          "IsShieldJustDamaged": false,
+          "ShieldDamageTaken": 2.0247e-320,
+          "FlatDamageReduction": 0,
+          "PercentDamageReduction": 0
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "nave_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 75,
+                        "y": 73
+                      },
+                      {
+                        "x": 483,
+                        "y": 73
+                      },
+                      {
+                        "x": 483,
+                        "y": 354
+                      },
+                      {
+                        "x": 75,
+                        "y": 354
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "Espacio",
+      "persistentUuid": "6812b14b-60fa-439f-9593-730abd64588a",
+      "texture": "ChatGPT Image 25 jun 2026, 05_08_58 p.m.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Bala_Alien",
+      "persistentUuid": "b8b3d38c-2fb5-4a92-bb34-1316128ad996",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Disparo2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 12,
+                        "y": 0
+                      },
+                      {
+                        "x": 12,
+                        "y": 16
+                      },
+                      {
+                        "x": 4,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1185,6 +1477,9 @@
     "children": [
       {
         "objectName": "Camino"
+      },
+      {
+        "objectName": "Espacio"
       },
       {
         "objectName": "RoverLunar"
@@ -1224,6 +1519,12 @@
       },
       {
         "objectName": "AtencionControles"
+      },
+      {
+        "objectName": "Ovni"
+      },
+      {
+        "objectName": "Bala_Alien"
       }
     ]
   },
@@ -1277,6 +1578,34 @@
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Movimiento Espacio"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "TiledSpriteObject::YOffset"
+          },
+          "parameters": [
+            "Espacio",
+            "-",
+            "300 * TimeDelta()"
+          ]
+        }
+      ]
     },
     {
       "colorB": 228,
@@ -1607,6 +1936,17 @@
       "conditions": [
         {
           "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Carril_Actual",
+            ">",
+            "0"
+          ]
+        },
+        {
+          "type": {
             "value": "KeyFromTextPressed"
           },
           "parameters": [
@@ -1682,6 +2022,17 @@
             "RoverLunar.TiempoDeCambioDeCarril_Segundos_",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Carril_Actual",
+            "-",
+            "1"
+          ]
         }
       ],
       "variables": [
@@ -1739,6 +2090,17 @@
         },
         {
           "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Carril_Actual",
+            "<",
+            "2"
+          ]
+        },
+        {
+          "type": {
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": []
@@ -1772,6 +2134,17 @@
             "RoverLunar.TiempoDeCambioDeCarril_Segundos_",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Carril_Actual",
+            "+",
+            "1"
+          ]
         }
       ],
       "variables": [
@@ -1785,21 +2158,29 @@
     {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Evite de doble salto"
-        }
-      ]
+      "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Evite de doble salto"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -3162,6 +3543,1281 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Enemigos Desde Arriba"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Ovni\n"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneJustBegins"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"SpawnCooldown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"SpawnCooldown\"",
+            ">",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "PosicionElegida",
+            "=",
+            "RandomInRange(0,8)"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "PosicionOcupada",
+            "=",
+            "0"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Ovni",
+                "Carril_Posicion",
+                "=",
+                "PosicionElegida"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "PosicionOcupada",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "PosicionOcupada",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "348",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "348",
+                    "1",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "587",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "587",
+                    "1",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "829",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "829",
+                    "1",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "348",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "348",
+                    "80",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "587",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "587",
+                    "80",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "829",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "829",
+                    "80",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "6"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "348",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "348",
+                    "160",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "7"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "587",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "587",
+                    "160",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PosicionElegida",
+                    "=",
+                    "8"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ovni",
+                    "829",
+                    "-81",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Tween",
+                    "\"MoverACarril1\"",
+                    "829",
+                    "160",
+                    "\"linear\"",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "105"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Resizable",
+                    "=",
+                    "83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril_Posicion",
+                    "=",
+                    "PosicionElegida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "=",
+                    "800"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Carril",
+                    "=",
+                    "mod(PosicionElegida,3)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"SpawnCooldown\""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneJustBegins"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownDisparo\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Carril_Actual",
+            "=",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownDisparo\"",
+            ">=",
+            "1.5"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownDisparo\""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Ovni",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Ovni",
+                "Carril",
+                "=",
+                "RoverLunar.Carril_Actual"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Bala_Alien",
+                "Ovni.CenterX() -6",
+                "Ovni.CenterY()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceAL"
+              },
+              "parameters": [
+                "Bala_Alien",
+                "90",
+                "600",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetZOrder"
+              },
+              "parameters": [
+                "Bala_Alien",
+                "=",
+                "100000"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Bala_Alien",
+                "\"240;141;186\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "sonidos/w-dl-44-blaster-pistol.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Disparo",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Disparo",
+            "Ovni",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Health::Health::Hit"
+          },
+          "parameters": [
+            "Ovni",
+            "Health",
+            "50",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "Disparo",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Ovni",
+      "conditions": [
+        {
+          "type": {
+            "value": "Health::Health::IsJustDamaged"
+          },
+          "parameters": [
+            "Ovni",
+            "Health",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ChangeColor"
+          },
+          "parameters": [
+            "Ovni",
+            "\"208;2;27\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "0.3"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangeColor"
+          },
+          "parameters": [
+            "Ovni",
+            "\"255;255;255\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ],
   "layers": [
@@ -3243,6 +4899,10 @@
     {
       "name": "Flippable",
       "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "Health",
+      "type": "Health::Health"
     },
     {
       "name": "Opacity",

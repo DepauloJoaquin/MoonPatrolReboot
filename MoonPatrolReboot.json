@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 270,
+    "build": 272,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -398,6 +398,62 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "Nave_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Nave_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "nave_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "nave_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "ChatGPT Image 25 jun 2026, 05_08_58 p.m.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ChatGPT Image 25 jun 2026, 05_08_58 p.m.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Disparo2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Disparo2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "nave_3.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"nave_3.png\",\"extension\":\".png\"}",
+        "name": "nave_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "nave_rojo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "nave_rojo.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "nave_roja2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "nave_roja2.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -422,6 +478,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/sticker"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/health"
     }
   ],
   "externalLayouts": []
