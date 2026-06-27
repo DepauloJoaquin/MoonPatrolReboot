@@ -20,12 +20,17 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.3838126879016974,
+    "zoomFactor": 0.45303798320961,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
   },
-  "objectsGroups": [],
+  "objectsGroups": [
+    {
+      "name": "ObstaculosDestructibles",
+      "objects": []
+    }
+  ],
   "variables": [
     {
       "name": "EnJuego",
@@ -251,40 +256,6 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 85,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Controles",
-      "persistentUuid": "309ae3c6-13ba-4108-a0b8-9618e1583bd0",
-      "width": 232,
-      "x": 5,
-      "y": 189,
-      "zOrder": 10012,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 22,
-      "keepRatio": true,
-      "layer": "",
-      "name": "AtencionControles",
-      "persistentUuid": "dd874c7b-1886-497e-9bf7-e7469d29e984",
-      "width": 188,
-      "x": 8,
-      "y": 434,
-      "zOrder": 10013,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
       "height": 83,
       "keepRatio": true,
       "layer": "",
@@ -311,6 +282,118 @@
       "x": 2,
       "y": 0,
       "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BarraIndicadoraTurbo",
+      "persistentUuid": "ee122395-0945-4527-ab01-b5d917d1173e",
+      "width": 0,
+      "x": 57,
+      "y": 305,
+      "zOrder": 10015,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BarraIndicadoraTemperatura",
+      "persistentUuid": "e38431c8-22a5-4e50-a503-f7dfdb010f1d",
+      "width": 0,
+      "x": 57,
+      "y": 179,
+      "zOrder": 10016,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TEscudo",
+      "persistentUuid": "a4936db9-3c15-4a90-8958-f5781ce8d501",
+      "width": 0,
+      "x": 64,
+      "y": 24,
+      "zOrder": 10017,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BarraIndicadoraEscudo",
+      "persistentUuid": "a13b604d-b95b-4cf1-b5b4-1ac574e96577",
+      "width": 0,
+      "x": 57,
+      "y": 53,
+      "zOrder": 10018,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TTemperatura",
+      "persistentUuid": "65585f70-4318-4ffc-b5b0-5fa06bc4e7ce",
+      "width": 0,
+      "x": 60,
+      "y": 145,
+      "zOrder": 10019,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TTIndicadores",
+      "persistentUuid": "8150d397-95dc-4cc4-8412-6f068dc39ffc",
+      "width": 0,
+      "x": 35,
+      "y": 420,
+      "zOrder": 10020,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TTurbo",
+      "persistentUuid": "2a4f4ccd-5120-4448-9fa0-95e9623ed071",
+      "width": 0,
+      "x": 73,
+      "y": 272,
+      "zOrder": 10021,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1692,6 +1775,377 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "98213fe7f1e2289ef501a2e0a96ed2292535e720bfa616da42cf780d99a3c6d0",
+      "name": "BarraIndicadoraTurbo",
+      "persistentUuid": "f5af09ea-1254-4e36-adc1-7a3306584a14",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Blue Dot Bar",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Adjustment",
+          "name": "Effect",
+          "doubleParameters": {
+            "alpha": 1,
+            "blue": 0,
+            "brightness": 1,
+            "contrast": 1,
+            "gamma": 1,
+            "green": 5,
+            "red": 0,
+            "saturation": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Outline",
+          "name": "Effect2",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 0.5
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false,
+        "InitialValue": 0,
+        "MaxValue": 3
+      }
+    },
+    {
+      "assetStoreId": "98213fe7f1e2289ef501a2e0a96ed2292535e720bfa616da42cf780d99a3c6d0",
+      "name": "BarraIndicadoraTemperatura",
+      "persistentUuid": "ea63322b-de24-42b0-bfdc-948901ce321b",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Blue Dot Bar",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Adjustment",
+          "name": "Coloración",
+          "doubleParameters": {
+            "alpha": 1,
+            "blue": 0,
+            "brightness": 1,
+            "contrast": 1,
+            "gamma": 1,
+            "green": 0,
+            "red": 5,
+            "saturation": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Outline",
+          "name": "Contorno",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 0.5
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false,
+        "InitialValue": 0,
+        "MaxValue": 100
+      }
+    },
+    {
+      "assetStoreId": "98213fe7f1e2289ef501a2e0a96ed2292535e720bfa616da42cf780d99a3c6d0",
+      "name": "BarraIndicadoraEscudo",
+      "persistentUuid": "09b058db-65ab-48aa-8c0a-8c009d1097c3",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Blue Dot Bar",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect2",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 0.5
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": true,
+        "InitialValue": 10,
+        "MaxValue": 10
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TEscudo",
+      "persistentUuid": "4c109e4b-a34a-4d92-9915-3a99a22c66b0",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Escudo : 10",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 35,
+        "g": 166,
+        "r": 245
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Escudo : 10",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "245;166;35"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TTemperatura",
+      "persistentUuid": "552e6466-9876-42d3-b775-a783521a691b",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Temperatura",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 35,
+        "g": 166,
+        "r": 245
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Temperatura",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "245;166;35"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TTurbo",
+      "persistentUuid": "1f7f6933-a059-4ed9-ba60-d06ac6e76393",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Turbo",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 35,
+        "g": 166,
+        "r": 245
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Turbo",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "245;166;35"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TTIndicadores",
+      "persistentUuid": "96cab230-c134-4ae2-a7b2-e513666b7e2e",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "W: Salto\nA: Izquierda\nD: Derecha \nFlecha Arriba : Disparo Normal\nFlecha Abajo : Disparo Cargado\nFlecha Izquierda: Escudo\nFlecha Derecha: Turbo",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 252,
+        "r": 22
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "W: Salto\nA: Izquierda\nD: Derecha \nFlecha Arriba : Disparo Normal\nFlecha Abajo : Disparo Cargado\nFlecha Izquierda: Escudo\nFlecha Derecha: Turbo",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "22;252;0"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Piedra",
+      "persistentUuid": "97c377e8-861a-442c-9a06-44d94fefb283",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Piedra.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 21,
+                        "y": 21
+                      },
+                      {
+                        "x": 82,
+                        "y": 21
+                      },
+                      {
+                        "x": 82,
+                        "y": 81
+                      },
+                      {
+                        "x": 21,
+                        "y": 81
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1756,6 +2210,30 @@
       },
       {
         "objectName": "Crater"
+      },
+      {
+        "objectName": "BarraIndicadoraTurbo"
+      },
+      {
+        "objectName": "BarraIndicadoraEscudo"
+      },
+      {
+        "objectName": "BarraIndicadoraTemperatura"
+      },
+      {
+        "objectName": "TEscudo"
+      },
+      {
+        "objectName": "TTemperatura"
+      },
+      {
+        "objectName": "TTurbo"
+      },
+      {
+        "objectName": "TTIndicadores"
+      },
+      {
+        "objectName": "Piedra"
       }
     ]
   },
@@ -1858,7 +2336,7 @@
           },
           "parameters": [
             "",
-            "\"Space\""
+            "\"w\""
           ]
         },
         {
@@ -1905,7 +2383,7 @@
           },
           "parameters": [
             "",
-            "\"Space\""
+            "\"w\""
           ]
         },
         {
@@ -2466,7 +2944,7 @@
           },
           "parameters": [
             "",
-            "\"Space\""
+            "\"w\""
           ]
         },
         {
@@ -2613,7 +3091,7 @@
           },
           "parameters": [
             "",
-            "\"l\""
+            "\"Left\""
           ]
         },
         {
@@ -2849,6 +3327,86 @@
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"cooldownEscudo\"",
+            "<",
+            "10"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "BarraIndicadoraEscudo",
+            "=",
+            "10 - \nTimerElapsedTime(\"tiempoDeUsoEscudo\")",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "TEscudo",
+            "Text",
+            "=",
+            "\"Escudo: \" + ToString(trunc(10 - \nTimerElapsedTime(\"tiempoDeUsoEscudo\")))"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"cooldownEscudo\"",
+            ">=",
+            "10"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "BarraIndicadoraEscudo",
+            "=",
+            "(TimerElapsedTime(\"cooldownEscudo\") - 10) / 2",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "TEscudo",
+            "Text",
+            "=",
+            "\"Escudo: \" + ToString(trunc((TimerElapsedTime(\"cooldownEscudo\") - 10) / 2))"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": []
     },
@@ -2907,7 +3465,7 @@
           },
           "parameters": [
             "",
-            "\"i\""
+            "\"Right\""
           ]
         },
         {
@@ -3138,6 +3696,40 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CronometroRecargaTurbo\"",
+            "<=",
+            "3"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "BarraIndicadoraTurbo",
+            "=",
+            "TimerElapsedTime(\"CronometroRecargaTurbo\")",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -3335,6 +3927,28 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "BarraIndicadoraTemperatura",
+            "=",
+            "RoverLunar.Temperatura",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -3355,7 +3969,7 @@
           },
           "parameters": [
             "",
-            "\"k\""
+            "\"Down\""
           ]
         },
         {
@@ -3404,7 +4018,7 @@
           },
           "parameters": [
             "",
-            "\"k\""
+            "\"Down\""
           ]
         },
         {
@@ -3487,7 +4101,7 @@
           },
           "parameters": [
             "",
-            "\"k\""
+            "\"Down\""
           ]
         },
         {
@@ -3574,7 +4188,7 @@
           },
           "parameters": [
             "",
-            "\"j\""
+            "\"Up\""
           ]
         },
         {
@@ -3669,7 +4283,7 @@
           },
           "parameters": [
             "",
-            "\"k\""
+            "\"Down\""
           ]
         },
         {
@@ -3824,6 +4438,7 @@
       ]
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -5551,6 +6166,139 @@
           "actions": []
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Piedrea\n"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "Piedra",
+            "+",
+            "100 * TimeDelta()"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Disparo",
+            "ObstaculosDestructibles",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "ObstaculosDestructibles",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Piedra",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "RoverLunar",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Disparo",
+            "ObstaculosDestructibles",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "ObstaculosDestructibles",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
