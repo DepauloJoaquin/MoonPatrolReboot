@@ -92,145 +92,23 @@
   "resources": {
     "resources": [
       {
-        "file": "camino_pixel_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_pixel_1.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/RoverLunar.png",
+        "file": "assets/imagenes/LineaSeparadora.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "RoverLunar",
+        "name": "LineaSeparadora",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "camino_pixel_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_pixel_2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ejemplo1_marcadorCamino.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ejemplo1_marcadorCamino.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ejemplo1_marcador_v1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ejemplo1_marcador_v1.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ejemplo1_marcadorCamino_v2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ejemplo1_marcadorCamino_v2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "camino_v2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_v2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "camino_pixel_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_pixel_3.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ChatGPT Image 3 jun 2026, 04_03_55 p.m.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ChatGPT Image 3 jun 2026, 04_03_55 p.m.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ChatGPT Image 3 jun 2026, 04_09_15 p.m.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ChatGPT Image 3 jun 2026, 04_09_15 p.m.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "camino_pixel_4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_pixel_4.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/NewSprite.png",
+        "file": "assets/imagenes/DisparoCargadoFuerte.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite",
+        "name": "DisparoCargado",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite2",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "Rover.png",
-        "kind": "image",
-        "metadata": "{\"localFilePath\":\"Rover.png\",\"extension\":\".png\"}",
-        "name": "Rover.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/SpriteDisparoPrevisional.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "SpriteDisparoPrevisional",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/NewSprite3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite3.png\"}",
-        "name": "NewSprite3",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "../shield-4.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "../shield-4.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "iphone-low-battery.mp3",
+        "file": "assets/sonidos/iphone-low-battery.mp3",
         "kind": "audio",
         "metadata": "",
         "name": "iphone-low-battery.mp3",
@@ -240,51 +118,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite4.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite4.png\"}",
-        "name": "NewSprite4",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "../MoonPatrolReboot_Merges/disparo normal.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "../MoonPatrolReboot_Merges/disparo normal.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "../MoonPatrolReboot_Merges/DisparoCargado.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "../MoonPatrolReboot_Merges/DisparoCargado.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "../MoonPatrolReboot_Merges/assets/Power Up 2.aac",
-        "kind": "audio",
-        "metadata": "",
-        "name": "../MoonPatrolReboot_Merges/assets/Power Up 2.aac",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "../MoonPatrolReboot_Merges/assets/Death.aac",
-        "kind": "audio",
-        "metadata": "",
-        "name": "../MoonPatrolReboot_Merges/assets/Death.aac",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Power Up 2.aac",
+        "file": "assets/sonidos/Power Up 2.aac",
         "kind": "audio",
         "metadata": "",
         "name": "assets/Power Up 2.aac",
@@ -294,7 +128,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/Death.aac",
+        "file": "assets/sonidos/Death.aac",
         "kind": "audio",
         "metadata": "",
         "name": "assets/Death.aac",
@@ -304,7 +138,7 @@
         "userAdded": false
       },
       {
-        "file": "sonidos/shield-4.mp3",
+        "file": "assets/sonidos/shield-4.mp",
         "kind": "audio",
         "metadata": "",
         "name": "sonidos/shield-4.mp3",
@@ -314,7 +148,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/disparo normal.png",
+        "file": "assets/imagenes/DisparoSimple.png",
         "kind": "image",
         "metadata": "",
         "name": "assets/disparo normal.png",
@@ -322,7 +156,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/DisparoCargado.png",
+        "file": "assets/imagenes/DisparoCargadoDebil.png",
         "kind": "image",
         "metadata": "",
         "name": "assets/DisparoCargado.png",
@@ -330,7 +164,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/Dot Bar Blue Border2.png",
+        "file": "assets/imagenes/Dot Bar Blue Border2.png",
         "kind": "image",
         "metadata": "",
         "name": "Dot Bar Blue Border.png",
@@ -342,7 +176,7 @@
         }
       },
       {
-        "file": "assets/Dot Bar Blue Fill Bar2.png",
+        "file": "assets/imagenes/Dot Bar Blue Fill Bar2.png",
         "kind": "image",
         "metadata": "",
         "name": "Dot Bar Blue Fill Bar.png",
@@ -354,19 +188,7 @@
         }
       },
       {
-        "file": "assets/Rounded Square Red Fill Bar.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\Rounded Square Red Fill Bar.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/Kenney/6c24bc12b470979e1cf0d049652439a6d922a619cb9ff96724244e0c100cfbcb_Rounded Square Red Fill Bar.png",
-          "name": "Rounded Square Red Fill Bar.png"
-        }
-      },
-      {
-        "file": "assets/Rounded Square Transparent Border2.png",
+        "file": "assets/imagenes/Rounded Square Transparent Border2.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Rounded Square Transparent Border.png",
@@ -378,15 +200,86 @@
         }
       },
       {
-        "file": "assets/Rounded Square Yellow Fill Bar2.png",
+        "file": "assets/imagenes/Rover.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets\\Rounded Square Yellow Fill Bar.png",
+        "name": "assets/Rover.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/imagenes/camino_pixel_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/camino_pixel_4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/imagenes/Piedra.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Piedra",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/8BitOperatorPlus8Regular.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\8BitOperatorPlus8Regular.png",
         "smoothed": false,
         "userAdded": false,
         "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/Kenney/787adbbfd4d93e6a2f33d7b20115926d950e35c177ca2e699370ec02504c53be_Rounded Square Yellow Fill Bar.png",
-          "name": "Rounded Square Yellow Fill Bar.png"
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/5ae0a579dbe67c533d19b92f1c1c84cec739b7c22a689823c9e1ba19ee883c36_8BitOperatorPlus8Regular.png",
+          "name": "8BitOperatorPlus8Regular.png"
+        }
+      },
+      {
+        "file": "assets/Tiny Square Orange Fill Bar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Tiny Square Orange Fill Bar.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/d051fee6e9eb27390d0406aa82980cec98f1f92667e5d7765e017fd6ef2b0118_Tiny Square Orange Fill Bar.png",
+          "name": "Tiny Square Orange Fill Bar.png"
+        }
+      },
+      {
+        "file": "assets/Tiny Square Red Fill Bar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Tiny Square Red Fill Bar.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/1dd84fa43daac4844f88c4645dc3a77290ae2260bdbf7d6ed769903982ffff63_Tiny Square Red Fill Bar.png",
+          "name": "Tiny Square Red Fill Bar.png"
+        }
+      },
+      {
+        "file": "assets/Tiny Square White Border.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Tiny Square White Border.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/f514ae509ed9c23d6412fd28ef659473cab14ea6d43d35fc158fafe6f95077c8_Tiny Square White Border.png",
+          "name": "Tiny Square White Border.png"
+        }
+      },
+      {
+        "file": "assets/8BitOperatorPlus8Regular.fnt",
+        "kind": "bitmapFont",
+        "metadata": "",
+        "name": "assets\\8BitOperatorPlus8Regular.fnt",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/8826f8477c073a233f09326bd5bb208fdd51415e6bfdc3fe8c4b75ab5635521e_8BitOperatorPlus8Regular.fnt",
+          "name": "8BitOperatorPlus8Regular.fnt"
         }
       }
     ]

@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.6787085220045274,
+    "zoomFactor": 0.5750002246761295,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -220,7 +220,7 @@
       "persistentUuid": "0e82fd20-8f26-44cc-92e4-4edb20fcf118",
       "width": 81,
       "x": 585,
-      "y": 504,
+      "y": 495,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -289,6 +289,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Piedra",
+      "persistentUuid": "df86c03d-8c45-4c3f-bb9f-148d5a892f18",
+      "width": 0,
+      "x": 585,
+      "y": 73,
+      "zOrder": 10017,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -297,7 +313,7 @@
       "height": 32,
       "name": "Camino",
       "persistentUuid": "6ef00e6f-894f-4573-b770-085465869abd",
-      "texture": "camino_pixel_4.png",
+      "texture": "assets/camino_pixel_4.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -420,7 +436,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Rover.png",
+                  "image": "assets/Rover.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -482,7 +498,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "NewSprite",
+                  "image": "LineaSeparadora",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -525,7 +541,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "Bala",
+      "name": "DispCargadoFuerte",
       "persistentUuid": "dbf23ce6-7c65-48dd-a6a6-ce8e4acec408",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -544,7 +560,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "SpriteDisparoPrevisional",
+                  "image": "DisparoCargado",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -675,69 +691,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "Escudo",
-      "persistentUuid": "7d8dfcae-7061-4b5d-9af2-209859f682ee",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "NewSprite",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "NewSprite4",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 13,
-                        "y": 13
-                      },
-                      {
-                        "x": 50,
-                        "y": 13
-                      },
-                      {
-                        "x": 50,
-                        "y": 50
-                      },
-                      {
-                        "x": 13,
-                        "y": 50
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "",
-      "name": "DIsparo",
+      "name": "DispSimple",
       "persistentUuid": "e2b17a4b-cd7e-4651-ad71-d7031d9e1022",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -799,7 +753,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "DisparoFuerte",
+      "name": "DispCargadoDebil",
       "persistentUuid": "ba2c4204-ad39-4bf8-8bd0-fbd60f2bc30b",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -1010,7 +964,7 @@
       "name": "BarraIndicadoraEscudo",
       "persistentUuid": "5281c5ed-fb9e-45dc-8e88-539fe4740b2e",
       "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
-      "variant": "Blue Dot Bar",
+      "variant": "Blue Dot Bar2",
       "variables": [],
       "effects": [
         {
@@ -1094,7 +1048,7 @@
       "name": "BarraIndicadoraCarga",
       "persistentUuid": "6749c845-705d-4254-8be2-9e04c8d21708",
       "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
-      "variant": "Rounded Square Red Bar",
+      "variant": "Tiny Square Red Bar",
       "variables": [],
       "effects": [],
       "behaviors": [
@@ -1165,6 +1119,68 @@
         "InitialValue": 0,
         "MaxValue": 3
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Piedra",
+      "persistentUuid": "990c2b14-ca7e-4718-8649-3f1b56ecd208",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Piedra",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Piedra",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 21,
+                        "y": 21
+                      },
+                      {
+                        "x": 82,
+                        "y": 21
+                      },
+                      {
+                        "x": 82,
+                        "y": 81
+                      },
+                      {
+                        "x": 21,
+                        "y": 81
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1175,9 +1191,6 @@
         "children": [
           {
             "objectName": "LineasSeparadoras"
-          },
-          {
-            "objectName": "Escudo"
           },
           {
             "objectName": "Camino"
@@ -1191,13 +1204,16 @@
         "folderName": "Objetos",
         "children": [
           {
-            "objectName": "DisparoFuerte"
+            "objectName": "Piedra"
           },
           {
-            "objectName": "DIsparo"
+            "objectName": "DispCargadoFuerte"
           },
           {
-            "objectName": "Bala"
+            "objectName": "DispCargadoDebil"
+          },
+          {
+            "objectName": "DispSimple"
           },
           {
             "objectName": "RoverLunar"
@@ -1993,7 +2009,7 @@
               },
               "parameters": [
                 "",
-                "Bala",
+                "DispSimple",
                 "RoverLunar.CenterX()",
                 "RoverLunar.CenterY()",
                 ""
@@ -2004,7 +2020,7 @@
                 "value": "AddForceXY"
               },
               "parameters": [
-                "Bala",
+                "DispSimple",
                 "0",
                 "- (Velocidad_disparo)",
                 "1"
@@ -2040,7 +2056,7 @@
                 "value": "Delete"
               },
               "parameters": [
-                "Bala",
+                "DispSimple",
                 ""
               ]
             }
@@ -2344,7 +2360,7 @@
                   },
                   "parameters": [
                     "",
-                    "DisparoFuerte",
+                    "DispCargadoFuerte",
                     "RoverLunar.CenterX() - 5",
                     "RoverLunar.CenterY() - 32",
                     ""
@@ -2355,7 +2371,7 @@
                     "value": "AddForceAL"
                   },
                   "parameters": [
-                    "DisparoFuerte",
+                    "DispCargadoFuerte",
                     "270",
                     "600",
                     "1"
@@ -2407,7 +2423,7 @@
                   },
                   "parameters": [
                     "",
-                    "DIsparo",
+                    "DispCargadoDebil",
                     "RoverLunar.CenterX() - 5",
                     "RoverLunar.CenterY() - 32",
                     ""
@@ -2418,7 +2434,7 @@
                     "value": "AddForceAL"
                   },
                   "parameters": [
-                    "DIsparo",
+                    "DispCargadoDebil",
                     "270",
                     "600",
                     "1"
