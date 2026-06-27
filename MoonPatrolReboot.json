@@ -482,6 +482,22 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/SimboloAdvertenciaRojo5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/SimboloAdvertenciaRojo5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Crater5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Crater5.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
