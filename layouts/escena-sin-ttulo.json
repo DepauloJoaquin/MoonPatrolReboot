@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.45303798320961,
+    "zoomFactor": 0.6972272683424331,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -56,6 +56,45 @@
       "name": "CarrilAzar",
       "type": "number",
       "value": 0
+    },
+    {
+      "folded": true,
+      "name": "PotencialesObstaculos",
+      "type": "array",
+      "children": [
+        {
+          "type": "string",
+          "value": "Piedra"
+        },
+        {
+          "type": "string",
+          "value": "MinaEspacial"
+        }
+      ]
+    },
+    {
+      "folded": true,
+      "name": "PosicionesEnXPotencialesASpawnear",
+      "type": "array",
+      "children": [
+        {
+          "type": "number",
+          "value": 350
+        },
+        {
+          "type": "number",
+          "value": 593
+        },
+        {
+          "type": "number",
+          "value": 835
+        }
+      ]
+    },
+    {
+      "name": "FrecuenciaObstaculos",
+      "type": "number",
+      "value": 5
     }
   ],
   "instances": [
@@ -157,70 +196,6 @@
       "initialVariables": []
     },
     {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 23,
-      "layer": "",
-      "name": "TextoCooldown",
-      "persistentUuid": "7297bbc4-0dcf-4e75-a9e5-4a7dd9ec8adf",
-      "width": 167,
-      "x": 32,
-      "y": 63,
-      "zOrder": 10005,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "ContadorCooldown",
-      "persistentUuid": "07b9cb56-a815-4cd0-af0f-5cfbecb01937",
-      "width": 0,
-      "x": 209,
-      "y": 65,
-      "zOrder": 10008,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "DuracionEscudo",
-      "persistentUuid": "79ff5726-4453-40ea-92c9-1088cb4cd46e",
-      "width": 0,
-      "x": 32,
-      "y": 98,
-      "zOrder": 10009,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "ContadorEscudo",
-      "persistentUuid": "2edb6729-35ea-4c99-8a60-5958826e179b",
-      "width": 0,
-      "x": 201,
-      "y": 98,
-      "zOrder": 10010,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
       "angle": 90,
       "customSize": false,
       "height": 0,
@@ -232,22 +207,6 @@
       "x": 639,
       "y": 634,
       "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Texto_Temperatura",
-      "persistentUuid": "291c24d3-7686-4b28-a4c7-a3f29ca25686",
-      "width": 0,
-      "x": 32,
-      "y": 132,
-      "zOrder": 10011,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -295,8 +254,8 @@
       "name": "BarraIndicadoraTurbo",
       "persistentUuid": "ee122395-0945-4527-ab01-b5d917d1173e",
       "width": 0,
-      "x": 57,
-      "y": 305,
+      "x": 79,
+      "y": 275,
       "zOrder": 10015,
       "numberProperties": [],
       "stringProperties": [],
@@ -311,8 +270,8 @@
       "name": "BarraIndicadoraTemperatura",
       "persistentUuid": "e38431c8-22a5-4e50-a503-f7dfdb010f1d",
       "width": 0,
-      "x": 57,
-      "y": 179,
+      "x": 79,
+      "y": 183,
       "zOrder": 10016,
       "numberProperties": [],
       "stringProperties": [],
@@ -327,8 +286,8 @@
       "name": "TEscudo",
       "persistentUuid": "a4936db9-3c15-4a90-8958-f5781ce8d501",
       "width": 0,
-      "x": 64,
-      "y": 24,
+      "x": 86,
+      "y": 66,
       "zOrder": 10017,
       "numberProperties": [],
       "stringProperties": [],
@@ -343,8 +302,8 @@
       "name": "BarraIndicadoraEscudo",
       "persistentUuid": "a13b604d-b95b-4cf1-b5b4-1ac574e96577",
       "width": 0,
-      "x": 57,
-      "y": 53,
+      "x": 79,
+      "y": 95,
       "zOrder": 10018,
       "numberProperties": [],
       "stringProperties": [],
@@ -359,8 +318,8 @@
       "name": "TTemperatura",
       "persistentUuid": "65585f70-4318-4ffc-b5b0-5fa06bc4e7ce",
       "width": 0,
-      "x": 60,
-      "y": 145,
+      "x": 82,
+      "y": 149,
       "zOrder": 10019,
       "numberProperties": [],
       "stringProperties": [],
@@ -368,15 +327,16 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 175,
       "keepRatio": true,
       "layer": "",
       "name": "TTIndicadores",
       "persistentUuid": "8150d397-95dc-4cc4-8412-6f068dc39ffc",
-      "width": 0,
-      "x": 35,
-      "y": 420,
+      "width": 186,
+      "x": 45,
+      "y": 460,
       "zOrder": 10020,
       "numberProperties": [],
       "stringProperties": [],
@@ -391,9 +351,57 @@
       "name": "TTurbo",
       "persistentUuid": "2a4f4ccd-5120-4448-9fa0-95e9623ed071",
       "width": 0,
-      "x": 73,
-      "y": 272,
+      "x": 110,
+      "y": 243,
       "zOrder": 10021,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "PanelPrueba_HUD",
+      "persistentUuid": "702cf5d8-5e28-4283-bdbb-20452b0849d4",
+      "width": 0,
+      "x": 14,
+      "y": 10,
+      "zOrder": 950,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 330,
+      "layer": "",
+      "name": "PanelPrueba_HUD",
+      "persistentUuid": "b23c0527-dcfc-45cc-a258-cddbe29deba1",
+      "width": 251,
+      "x": 12,
+      "y": 373,
+      "zOrder": 950,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TTControles",
+      "persistentUuid": "f76b2373-7f48-487e-9244-110076b0e593",
+      "width": 0,
+      "x": 100,
+      "y": 436,
+      "zOrder": 10022,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -585,10 +593,44 @@
           "name": "Carril_Actual",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "tieneEscudo",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
       "behaviors": [
+        {
+          "isFolded": true,
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 30,
+          "CurrentHealth": 0,
+          "MaxHealth": 30,
+          "DamageCooldown": 1,
+          "AllowOverHealing": false,
+          "IsHealthJustDamaged": false,
+          "DamageToBeApplied": 0,
+          "HitAtLeastOnce": false,
+          "ChanceToDodge": 0,
+          "IsJustDodged": false,
+          "HealToBeApplied": 0,
+          "HealthRegenRate": 0,
+          "HealthRegenDelay": 0,
+          "IsJustHealed": false,
+          "CurrentShieldPoints": 2.0247e-320,
+          "MaxShieldPoints": 0,
+          "ShieldDuration": 5,
+          "ShieldRegenRate": 0,
+          "BlockExcessDamage": false,
+          "ShieldRegenDelay": 0,
+          "IsShieldJustDamaged": false,
+          "ShieldDamageTaken": 2.0247e-320,
+          "FlatDamageReduction": 0,
+          "PercentDamageReduction": 0
+        },
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
@@ -1912,7 +1954,7 @@
     },
     {
       "assetStoreId": "",
-      "bold": false,
+      "bold": true,
       "italic": false,
       "name": "TEscudo",
       "persistentUuid": "4c109e4b-a34a-4d92-9915-3a99a22c66b0",
@@ -1927,12 +1969,12 @@
       "textAlignment": "left",
       "characterSize": 20,
       "color": {
-        "b": 35,
-        "g": 166,
-        "r": 245
+        "b": 0,
+        "g": 252,
+        "r": 22
       },
       "content": {
-        "bold": false,
+        "bold": true,
         "isOutlineEnabled": false,
         "isShadowEnabled": false,
         "italic": false,
@@ -1951,12 +1993,12 @@
         "verticalTextAlignment": "top",
         "characterSize": 20,
         "lineHeight": 0,
-        "color": "245;166;35"
+        "color": "22;252;0"
       }
     },
     {
       "assetStoreId": "",
-      "bold": false,
+      "bold": true,
       "italic": false,
       "name": "TTemperatura",
       "persistentUuid": "552e6466-9876-42d3-b775-a783521a691b",
@@ -1971,12 +2013,12 @@
       "textAlignment": "left",
       "characterSize": 20,
       "color": {
-        "b": 35,
-        "g": 166,
-        "r": 245
+        "b": 0,
+        "g": 252,
+        "r": 22
       },
       "content": {
-        "bold": false,
+        "bold": true,
         "isOutlineEnabled": false,
         "isShadowEnabled": false,
         "italic": false,
@@ -1995,12 +2037,12 @@
         "verticalTextAlignment": "top",
         "characterSize": 20,
         "lineHeight": 0,
-        "color": "245;166;35"
+        "color": "22;252;0"
       }
     },
     {
       "assetStoreId": "",
-      "bold": false,
+      "bold": true,
       "italic": false,
       "name": "TTurbo",
       "persistentUuid": "1f7f6933-a059-4ed9-ba60-d06ac6e76393",
@@ -2015,12 +2057,12 @@
       "textAlignment": "left",
       "characterSize": 20,
       "color": {
-        "b": 35,
-        "g": 166,
-        "r": 245
+        "b": 0,
+        "g": 252,
+        "r": 22
       },
       "content": {
-        "bold": false,
+        "bold": true,
         "isOutlineEnabled": false,
         "isShadowEnabled": false,
         "italic": false,
@@ -2039,12 +2081,12 @@
         "verticalTextAlignment": "top",
         "characterSize": 20,
         "lineHeight": 0,
-        "color": "245;166;35"
+        "color": "22;252;0"
       }
     },
     {
       "assetStoreId": "",
-      "bold": false,
+      "bold": true,
       "italic": false,
       "name": "TTIndicadores",
       "persistentUuid": "96cab230-c134-4ae2-a7b2-e513666b7e2e",
@@ -2054,17 +2096,17 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "W: Salto\nA: Izquierda\nD: Derecha \nFlecha Arriba : Disparo Normal\nFlecha Abajo : Disparo Cargado\nFlecha Izquierda: Escudo\nFlecha Derecha: Turbo",
+      "string": "* W: Salto\n* A: Izquierda\n* D: Derecha \n* Flecha Arriba : Disparo \nNormal\n* Flecha Abajo : Disparo \nCargado\n* Flecha Izquierda: Escudo\n* Flecha Derecha: Turbo",
       "font": "",
       "textAlignment": "left",
-      "characterSize": 20,
+      "characterSize": 15,
       "color": {
         "b": 0,
         "g": 252,
         "r": 22
       },
       "content": {
-        "bold": false,
+        "bold": true,
         "isOutlineEnabled": false,
         "isShadowEnabled": false,
         "italic": false,
@@ -2077,11 +2119,11 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "W: Salto\nA: Izquierda\nD: Derecha \nFlecha Arriba : Disparo Normal\nFlecha Abajo : Disparo Cargado\nFlecha Izquierda: Escudo\nFlecha Derecha: Turbo",
+        "text": "* W: Salto\n* A: Izquierda\n* D: Derecha \n* Flecha Arriba : Disparo \nNormal\n* Flecha Abajo : Disparo \nCargado\n* Flecha Izquierda: Escudo\n* Flecha Derecha: Turbo",
         "font": "",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
-        "characterSize": 20,
+        "characterSize": 15,
         "lineHeight": 0,
         "color": "22;252;0"
       }
@@ -2146,6 +2188,216 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "PantallaGameOver",
+      "persistentUuid": "f4bd3fa0-8820-4922-8339-0269b62d641f",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Imagen_GameOver.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 130.5,
+                    "y": 65.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 261,
+                        "y": 0
+                      },
+                      {
+                        "x": 261,
+                        "y": 131
+                      },
+                      {
+                        "x": 0,
+                        "y": 131
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TGameOver",
+      "persistentUuid": "2ce88df4-4f55-485a-a83f-ce36f111db58",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Presiona \"Space\" para volver a jugar.",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 50,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Presiona \"Space\" para volver a jugar.",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 50,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "PanelPrueba_HUD",
+      "persistentUuid": "51c4fc93-069b-46b1-92b0-c1d789ffd664",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/potencial_panel_hud_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 251,
+                        "y": 0
+                      },
+                      {
+                        "x": 251,
+                        "y": 353
+                      },
+                      {
+                        "x": 0,
+                        "y": 353
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "TTControles",
+      "persistentUuid": "a99ece41-a248-4c0a-a2c7-aa4701300f33",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Controles:",
+      "font": "",
+      "textAlignment": "center",
+      "characterSize": 15,
+      "color": {
+        "b": 0,
+        "g": 252,
+        "r": 22
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Controles:",
+        "font": "",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 15,
+        "lineHeight": 0,
+        "color": "22;252;0"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -2233,7 +2485,19 @@
         "objectName": "TTIndicadores"
       },
       {
+        "objectName": "TTControles"
+      },
+      {
         "objectName": "Piedra"
+      },
+      {
+        "objectName": "PantallaGameOver"
+      },
+      {
+        "objectName": "TGameOver"
+      },
+      {
+        "objectName": "PanelPrueba_HUD"
       }
     ]
   },
@@ -2285,8 +2549,28 @@
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneJustBegins"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
+          ]
+        }
+      ]
     },
     {
       "type": "BuiltinCommonInstructions::Comment",
@@ -2317,15 +2601,16 @@
       ]
     },
     {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "name": "Funcionalidad de Salto de Rover",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [],
-      "parameters": []
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Funcionalidad Salto de Rover"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -2337,6 +2622,16 @@
           "parameters": [
             "",
             "\"w\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
           ]
         },
         {
@@ -2379,11 +2674,76 @@
       "conditions": [
         {
           "type": {
+            "value": "KeyFromTextJustPressed"
+          },
+          "parameters": [
+            "",
+            "\"w\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_salto_rover_final.wav",
+            "",
+            "100",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
             "value": "KeyFromTextReleased"
           },
           "parameters": [
             "",
             "\"w\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
           ]
         },
         {
@@ -2665,6 +3025,16 @@
         },
         {
           "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
             "inverted": true,
             "value": "Tween::IsPlaying"
           },
@@ -2762,6 +3132,16 @@
           "parameters": [
             "",
             "\"d\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
           ]
         },
         {
@@ -3096,6 +3476,16 @@
         },
         {
           "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "BooleanObjectVariable"
           },
           "parameters": [
@@ -3116,6 +3506,17 @@
             "Animation",
             "=",
             "\"Escudo\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneEscudo",
+            "True",
+            ""
           ]
         },
         {
@@ -3177,6 +3578,16 @@
         },
         {
           "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "BooleanObjectVariable"
           },
           "parameters": [
@@ -3197,6 +3608,17 @@
             "Animation",
             "=",
             "\"RoverLunar\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneEscudo",
+            "False",
+            ""
           ]
         },
         {
@@ -3488,6 +3910,16 @@
             "\"CronometroRecargaTurbo\"",
             ">=",
             "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
           ]
         }
       ],
@@ -3974,6 +4406,16 @@
         },
         {
           "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "BooleanObjectVariable"
           },
           "parameters": [
@@ -4019,6 +4461,16 @@
           "parameters": [
             "",
             "\"Down\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
           ]
         },
         {
@@ -4106,6 +4558,16 @@
         },
         {
           "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "NumberObjectVariable"
           },
           "parameters": [
@@ -4189,6 +4651,16 @@
           "parameters": [
             "",
             "\"Up\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "True",
+            ""
           ]
         },
         {
@@ -5564,11 +6036,6 @@
       ]
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
-    },
-    {
       "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
@@ -5594,6 +6061,18 @@
       "actions": [
         {
           "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_danio_nave_alien.wav",
+            "",
+            "50",
+            "1"
+          ]
+        },
+        {
+          "type": {
             "value": "Health::Health::Hit"
           },
           "parameters": [
@@ -5611,6 +6090,57 @@
           },
           "parameters": [
             "Disparo",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "DisparoFuerte",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "DisparoFuerte",
+            "Ovni",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_danio_nave_alien.wav",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Health::Health::Hit"
+          },
+          "parameters": [
+            "Ovni",
+            "Health",
+            "50",
+            "",
+            "",
             ""
           ]
         }
@@ -5661,6 +6191,44 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Ovni",
+            "Health",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_explosion_nave_alien.wav",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "Ovni",
+            ""
+          ]
+        }
+      ]
+    },
+    {
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -5671,6 +6239,32 @@
         "textR": 0
       },
       "comment": "MinaEspacial"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "MinaEspacial",
+            "+",
+            "300 * TimeDelta()"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetZOrder"
+          },
+          "parameters": [
+            "MinaEspacial",
+            "=",
+            "9000"
+          ]
+        }
+      ]
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -5829,6 +6423,68 @@
           },
           "parameters": [
             "MinaEspacial",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "RoverLunar",
+            "MinaEspacial",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneEscudo",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_explosion_rover.wav",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "RoverLunar",
             ""
           ]
         }
@@ -6168,6 +6824,68 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Crater",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneEscudo",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_explosion_rover.wav",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "RoverLunar",
+            ""
+          ]
+        }
+      ]
+    },
+    {
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -6177,7 +6895,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Piedrea\n"
+      "comment": "Piedra"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -6190,7 +6908,17 @@
           "parameters": [
             "Piedra",
             "+",
-            "100 * TimeDelta()"
+            "300 * TimeDelta()"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetZOrder"
+          },
+          "parameters": [
+            "Piedra",
+            "=",
+            "9000"
           ]
         }
       ]
@@ -6204,7 +6932,7 @@
           },
           "parameters": [
             "Disparo",
-            "ObstaculosDestructibles",
+            "Piedra",
             "",
             "",
             ""
@@ -6217,7 +6945,35 @@
             "value": "Delete"
           },
           "parameters": [
-            "ObstaculosDestructibles",
+            "Disparo",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "DisparoFuerte",
+            "Piedra",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "DisparoFuerte",
             ""
           ]
         }
@@ -6244,6 +7000,495 @@
           },
           "parameters": [
             "RoverLunar",
+            "tieneEscudo",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_explosion_rover.wav",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "RoverLunar",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Generacion Obstáculos (Piedras y Minas)"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneJustBegins"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownGeneradorDeObstaculos\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownGeneradorDeObstaculos\"",
+            ">=",
+            "FrecuenciaObstaculos"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownGeneradorDeObstaculos\""
+          ]
+        },
+        {
+          "type": {
+            "value": "CreateByName"
+          },
+          "parameters": [
+            "",
+            "ObstaculosDestructibles",
+            "VariableString(PotencialesObstaculos[Random(VariableChildCount(PotencialesObstaculos) - 1)])",
+            "PosicionesEnXPotencialesASpawnear[RandomInRange(0, VariableChildCount(PosicionesEnXPotencialesASpawnear) - 1)]",
+            "-100",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "SimboloAdvertenciaAmarillo",
+            "560",
+            "0",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "SimboloAdvertenciaAmarillo",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Aumento de generación de obstáculos "
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneJustBegins"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownAumentoDificultad\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownAumentoDificultad\"",
+            ">=",
+            "15"
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "FrecuenciaObstaculos",
+            ">=",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "FrecuenciaObstaculos",
+            "-",
+            "0.5"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"CooldownAumentoDificultad\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Game Over"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneInstancesCount"
+          },
+          "parameters": [
+            "",
+            "RoverLunar",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "UnloadAllAudio"
+          },
+          "parameters": [
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/efecto_sonido_game_over.wav",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "PantallaGameOver",
+            "650",
+            "335",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "TGameOver",
+            "242",
+            "552",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+          },
+          "parameters": [
+            "PantallaGameOver",
+            "Resizable",
+            "=",
+            "1350"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+          },
+          "parameters": [
+            "PantallaGameOver",
+            "Resizable",
+            "=",
+            "750"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetZOrder"
+          },
+          "parameters": [
+            "PantallaGameOver",
+            "=",
+            "11000"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetZOrder"
+          },
+          "parameters": [
+            "TGameOver",
+            "=",
+            "11010"
+          ]
+        },
+        {
+          "type": {
+            "value": "PickAllInstances"
+          },
+          "parameters": [
+            "",
+            "Disparo"
+          ]
+        },
+        {
+          "type": {
+            "value": "PickAllInstances"
+          },
+          "parameters": [
+            "",
+            "DisparoFuerte"
+          ]
+        },
+        {
+          "type": {
+            "value": "PickAllInstances"
+          },
+          "parameters": [
+            "",
+            "Bala_Alien"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangeTimeScale"
+          },
+          "parameters": [
+            "",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "False",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Reinicio de partidas"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "EnJuego",
+            "=",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"Space\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"Escena sin título\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Colisión con obstáculos al tener escudo"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Piedra",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneEscudo",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
             "estaSaltando",
             "False",
             ""
@@ -6256,7 +7501,7 @@
             "value": "Delete"
           },
           "parameters": [
-            "RoverLunar",
+            "Piedra",
             ""
           ]
         }
@@ -6270,10 +7515,32 @@
             "value": "CollisionNP"
           },
           "parameters": [
-            "Disparo",
-            "ObstaculosDestructibles",
+            "RoverLunar",
+            "MinaEspacial",
             "",
             "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneEscudo",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "False",
             ""
           ]
         }
@@ -6284,7 +7551,7 @@
             "value": "Delete"
           },
           "parameters": [
-            "ObstaculosDestructibles",
+            "MinaEspacial",
             ""
           ]
         }
@@ -6296,14 +7563,234 @@
       "actions": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Sistema Salud de Rover (Para disparos de balas aliens)"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Bala_Alien",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "=",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneEscudo",
+            "=",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_danio_rover.wav",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Health::Health::Hit"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Health",
+            "10",
+            "no",
+            "no",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "Bala_Alien",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Bala_Alien",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "estaSaltando",
+            "=",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "tieneEscudo",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "Bala_Alien",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Health::Health::IsJustDamaged"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Health",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ChangeColor"
+          },
+          "parameters": [
+            "RoverLunar",
+            "\"208;2;27\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "0.3"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangeColor"
+          },
+          "parameters": [
+            "RoverLunar",
+            "\"255;255;255\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Health",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_explosion_rover.wav",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "RoverLunar",
+            ""
+          ]
+        }
+      ]
     }
   ],
   "layers": [

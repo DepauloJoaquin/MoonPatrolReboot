@@ -530,6 +530,110 @@
         "name": "assets/Piedra.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "sonidos/efecto_sonido_game_over_prueba_2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/efecto_sonido_game_over_prueba_2.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/efecto_sonido_game_over.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/efecto_sonido_game_over.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Imagen_GameOver.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Imagen_GameOver.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/sfx_danio_rover.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/sfx_danio_rover.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/sfx_explosion_rover.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/sfx_explosion_rover.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/sfx_explosion_nave_alien.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/sfx_explosion_nave_alien.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/sfx_danio_nave_alien.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/sfx_danio_nave_alien.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/sfx_salto_rover.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/sfx_salto_rover.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/sfx_salto_rover_final.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/sfx_salto_rover_final.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/potencial_panel_hud_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/potencial_panel_hud_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/potencial_panel_hud_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/potencial_panel_hud_2.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
