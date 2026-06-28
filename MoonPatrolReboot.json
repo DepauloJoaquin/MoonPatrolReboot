@@ -634,6 +634,14 @@
         "name": "assets/potencial_panel_hud_2.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Imagen_GameOver_Final.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Imagen_GameOver_Final.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },

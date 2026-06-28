@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6972272683424331,
+    "zoomFactor": 0.5527808136442419,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -34,39 +34,47 @@
   "variables": [
     {
       "name": "EnJuego",
+      "persistentUuid": "9deeec48-3381-44e6-87cd-a878e208640f",
       "type": "boolean",
       "value": true
     },
     {
       "name": "PosicionElegida",
+      "persistentUuid": "c9e1edcb-d62a-4ab2-b9cd-cd6e1fc13817",
       "type": "number",
       "value": 0
     },
     {
       "name": "PosicionOcupada",
+      "persistentUuid": "e6c1ebfb-dc85-4196-a610-a2e1439617c3",
       "type": "number",
       "value": 0
     },
     {
       "name": "FrecuenciaCrateres",
+      "persistentUuid": "fc2c4668-711f-4864-ab3c-b6f6bae7f357",
       "type": "number",
       "value": 2
     },
     {
       "name": "CarrilAzar",
+      "persistentUuid": "ab7b20cc-c143-46c3-8464-59919b361967",
       "type": "number",
       "value": 0
     },
     {
       "folded": true,
       "name": "PotencialesObstaculos",
+      "persistentUuid": "afde54a9-d13a-4ee0-844e-93dd4510e9e6",
       "type": "array",
       "children": [
         {
+          "persistentUuid": "3b7294c5-2738-4b2f-89c4-5968f422737c",
           "type": "string",
           "value": "Piedra"
         },
         {
+          "persistentUuid": "c9593e0c-1edc-4e99-902f-8ca33c1f5a0a",
           "type": "string",
           "value": "MinaEspacial"
         }
@@ -75,17 +83,21 @@
     {
       "folded": true,
       "name": "PosicionesEnXPotencialesASpawnear",
+      "persistentUuid": "c7f99a66-9521-47ae-bea5-427c75b6a5d5",
       "type": "array",
       "children": [
         {
+          "persistentUuid": "83c0f341-97ff-42ef-b96d-03d6453b169b",
           "type": "number",
           "value": 350
         },
         {
+          "persistentUuid": "70c213b0-c846-421b-87db-442c8450a81c",
           "type": "number",
           "value": 593
         },
         {
+          "persistentUuid": "533cc4d4-c75b-4079-8d93-40b02fb316e0",
           "type": "number",
           "value": 835
         }
@@ -93,6 +105,7 @@
     },
     {
       "name": "FrecuenciaObstaculos",
+      "persistentUuid": "1bed1b3b-cc24-41ce-8001-4c47dbab5e05",
       "type": "number",
       "value": 5
     }
@@ -2210,12 +2223,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Imagen_GameOver.png",
+                  "image": "assets/Imagen_GameOver_Final.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 130.5,
-                    "y": 65.5
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2230,16 +2243,16 @@
                         "y": 0
                       },
                       {
-                        "x": 261,
+                        "x": 1365,
                         "y": 0
                       },
                       {
-                        "x": 261,
-                        "y": 131
+                        "x": 1365,
+                        "y": 767
                       },
                       {
                         "x": 0,
-                        "y": 131
+                        "y": 767
                       }
                     ]
                   ]
@@ -2254,7 +2267,7 @@
       "assetStoreId": "",
       "bold": false,
       "italic": false,
-      "name": "TGameOver",
+      "name": "TGameOverDescartado",
       "persistentUuid": "2ce88df4-4f55-485a-a83f-ce36f111db58",
       "smoothed": true,
       "type": "TextObject::Text",
@@ -2494,7 +2507,7 @@
         "objectName": "PantallaGameOver"
       },
       {
-        "objectName": "TGameOver"
+        "objectName": "TGameOverDescartado"
       },
       {
         "objectName": "PanelPrueba_HUD"
@@ -4712,6 +4725,16 @@
         },
         {
           "type": {
+            "value": "SetZOrder"
+          },
+          "parameters": [
+            "Disparo",
+            "=",
+            "9000"
+          ]
+        },
+        {
+          "type": {
             "value": "SetNumberObjectVariable"
           },
           "parameters": [
@@ -4792,6 +4815,16 @@
             "270",
             "600",
             "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetZOrder"
+          },
+          "parameters": [
+            "DisparoFuerte",
+            "=",
+            "9000"
           ]
         },
         {
@@ -6007,7 +6040,7 @@
               "parameters": [
                 "Bala_Alien",
                 "=",
-                "100000"
+                "9000"
               ]
             },
             {
@@ -6271,6 +6304,34 @@
       "conditions": [
         {
           "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CronometroTurboActivo\"",
+            "<=",
+            "RoverLunar.DuracionMaximaTurbo"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "MinaEspacial",
+            "+",
+            "300 * TimeDelta()"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
             "value": "CollisionNP"
           },
           "parameters": [
@@ -6519,6 +6580,28 @@
             "Crater",
             "+",
             "300 * TimeDelta()"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+          },
+          "parameters": [
+            "Crater",
+            "Resizable",
+            "=",
+            "70"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+          },
+          "parameters": [
+            "Crater",
+            "Resizable",
+            "=",
+            "96"
           ]
         }
       ]
@@ -6928,6 +7011,34 @@
       "conditions": [
         {
           "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CronometroTurboActivo\"",
+            "<=",
+            "RoverLunar.DuracionMaximaTurbo"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "Piedra",
+            "+",
+            "300 * TimeDelta()"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
             "value": "CollisionNP"
           },
           "parameters": [
@@ -7290,43 +7401,9 @@
           "parameters": [
             "",
             "PantallaGameOver",
-            "650",
-            "335",
+            "-35",
+            "-15",
             ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "TGameOver",
-            "242",
-            "552",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-          },
-          "parameters": [
-            "PantallaGameOver",
-            "Resizable",
-            "=",
-            "1350"
-          ]
-        },
-        {
-          "type": {
-            "value": "ResizableCapability::ResizableBehavior::SetHeight"
-          },
-          "parameters": [
-            "PantallaGameOver",
-            "Resizable",
-            "=",
-            "750"
           ]
         },
         {
@@ -7336,17 +7413,7 @@
           "parameters": [
             "PantallaGameOver",
             "=",
-            "11000"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetZOrder"
-          },
-          "parameters": [
-            "TGameOver",
-            "=",
-            "11010"
+            "110000"
           ]
         },
         {
