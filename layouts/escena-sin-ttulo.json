@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.534748904088338,
+    "zoomFactor": 0.28476840914327095,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -34,47 +34,39 @@
   "variables": [
     {
       "name": "EnJuego",
-      "persistentUuid": "2eb8121c-a614-45f3-9c0f-768c5305c4f5",
       "type": "boolean",
       "value": true
     },
     {
       "name": "PosicionElegida",
-      "persistentUuid": "ba6124fe-ab7a-4568-a826-dd1ee45863f4",
       "type": "number",
       "value": 0
     },
     {
       "name": "PosicionOcupada",
-      "persistentUuid": "ece4441f-5995-4fc2-ae6d-03c9a2031a00",
       "type": "number",
       "value": 0
     },
     {
       "name": "FrecuenciaCrateres",
-      "persistentUuid": "087095a4-ca65-4906-a8a6-79cbc9ec83fe",
       "type": "number",
       "value": 2
     },
     {
       "name": "CarrilAzar",
-      "persistentUuid": "7d14aa55-11ec-430d-9c9e-d99d29d6f989",
       "type": "number",
       "value": 0
     },
     {
       "folded": true,
       "name": "PotencialesObstaculos",
-      "persistentUuid": "552d9001-85a0-4a25-bf88-45da9d1f1953",
       "type": "array",
       "children": [
         {
-          "persistentUuid": "f5408614-60e5-4d72-a882-7c1b35885a19",
           "type": "string",
           "value": "Piedra"
         },
         {
-          "persistentUuid": "f8745eb4-e8ca-4e79-a28d-4505e9ad2468",
           "type": "string",
           "value": "MinaEspacial"
         }
@@ -83,21 +75,17 @@
     {
       "folded": true,
       "name": "PosicionesEnXPotencialesASpawnear",
-      "persistentUuid": "3a1919a9-ebc2-4afa-8e07-5c5014689d67",
       "type": "array",
       "children": [
         {
-          "persistentUuid": "541721eb-d447-4094-ae13-09d2ee2fa098",
           "type": "number",
           "value": 350
         },
         {
-          "persistentUuid": "b304294e-e3a6-4667-9102-89b7d146d88e",
           "type": "number",
           "value": 593
         },
         {
-          "persistentUuid": "e2fb4a47-3122-442e-9fd7-8fe78b1cc312",
           "type": "number",
           "value": 835
         }
@@ -105,13 +93,11 @@
     },
     {
       "name": "FrecuenciaObstaculos",
-      "persistentUuid": "153bc724-5865-4500-a911-c57c7b3cb7e8",
       "type": "number",
       "value": 5
     },
     {
       "name": "CarrilActual",
-      "persistentUuid": "f2ccf9ab-428f-490e-87b0-6b260de55c0f",
       "type": "number",
       "value": 0
     }
@@ -4251,7 +4237,7 @@
                 "RoverLunar",
                 "Temperatura",
                 "+",
-                "1"
+                "0.5"
               ]
             },
             {
@@ -7556,7 +7542,7 @@
               "parameters": [
                 "Bala_Alien",
                 "=",
-                "100000"
+                "9050"
               ]
             },
             {
@@ -7856,6 +7842,34 @@
             "MinaEspacial",
             "=",
             "9000"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CronometroTurboActivo\"",
+            "<=",
+            "RoverLunar.DuracionMaximaTurbo"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "MinaEspacial",
+            "+",
+            "300 * TimeDelta()"
           ]
         }
       ]
@@ -8601,6 +8615,34 @@
             "Piedra",
             "=",
             "9000"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"CronometroTurboActivo\"",
+            "<=",
+            "RoverLunar.DuracionMaximaTurbo"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "Piedra",
+            "+",
+            "300 * TimeDelta()"
           ]
         }
       ]
