@@ -34,47 +34,47 @@
   "variables": [
     {
       "name": "EnJuego",
-      "persistentUuid": "6a11a4ea-fde0-4e1b-bd39-36893862c388",
+      "persistentUuid": "cc3f22ba-ba64-422d-9a46-4f034d083ecb",
       "type": "boolean",
       "value": true
     },
     {
       "name": "PosicionElegida",
-      "persistentUuid": "521959dc-7f75-4756-abe8-98e97b794b07",
+      "persistentUuid": "fbb1995f-ab40-4b5f-b2e4-aeb2c0fb85dd",
       "type": "number",
       "value": 0
     },
     {
       "name": "PosicionOcupada",
-      "persistentUuid": "e5bf8e81-2fb7-4817-a8bd-2ff3ea981ca2",
+      "persistentUuid": "0f265c2a-7798-41fa-b46b-0214ef6c9c8c",
       "type": "number",
       "value": 0
     },
     {
       "name": "FrecuenciaCrateres",
-      "persistentUuid": "658c0321-fcae-415f-b2b8-894870c0473f",
+      "persistentUuid": "d28b1afe-58b2-4940-88f6-eaf2b893fcf5",
       "type": "number",
       "value": 2
     },
     {
       "name": "CarrilAzar",
-      "persistentUuid": "4a3c74ab-c4da-4c67-91fb-7e58364cbda4",
+      "persistentUuid": "424c08f3-558d-4610-be91-d79905fbce33",
       "type": "number",
       "value": 0
     },
     {
       "folded": true,
       "name": "PotencialesObstaculos",
-      "persistentUuid": "d6bec03c-1afb-48e5-9583-dc08e61c765e",
+      "persistentUuid": "8a537441-cf9e-4649-9450-702fc471bef9",
       "type": "array",
       "children": [
         {
-          "persistentUuid": "ada29e9f-f1cf-45ab-835c-2922158ef0e5",
+          "persistentUuid": "0223bb3f-9936-4196-85d0-51b5b8936c07",
           "type": "string",
           "value": "Piedra"
         },
         {
-          "persistentUuid": "f8eb55fc-ee80-438f-8828-1346213d623f",
+          "persistentUuid": "33e1e925-0e9b-48e1-9c78-f8ec8206cbce",
           "type": "string",
           "value": "MinaEspacial"
         }
@@ -83,21 +83,21 @@
     {
       "folded": true,
       "name": "PosicionesEnXPotencialesASpawnear",
-      "persistentUuid": "07ce7b9f-6018-4323-8054-e3462c9e1e94",
+      "persistentUuid": "0d0137ea-227e-4edc-b159-b618b2a1eb40",
       "type": "array",
       "children": [
         {
-          "persistentUuid": "2b4ceb2e-64cf-486b-bfd1-170488854e75",
+          "persistentUuid": "223d6380-d50f-4d4f-8674-8cec1cad6e09",
           "type": "number",
           "value": 350
         },
         {
-          "persistentUuid": "3a6e15fe-237b-4bdc-b21f-301459ea848a",
+          "persistentUuid": "752e51a9-e86c-4725-ac50-0a10fc8dd3ee",
           "type": "number",
           "value": 593
         },
         {
-          "persistentUuid": "d4705c53-b82d-4d91-9441-3b6d3e7b9403",
+          "persistentUuid": "18399eaf-0cfc-4e60-aca7-441fbf34cffc",
           "type": "number",
           "value": 835
         }
@@ -105,13 +105,13 @@
     },
     {
       "name": "FrecuenciaObstaculos",
-      "persistentUuid": "39c87f8c-5fe1-4c1f-a054-c0f17ac7f91a",
+      "persistentUuid": "e3d87fe4-cfe6-4395-a90e-55e9dd85b690",
       "type": "number",
       "value": 5
     },
     {
       "name": "CarrilActual",
-      "persistentUuid": "d7858a2e-a258-4b7b-911b-2b46f56a58c9",
+      "persistentUuid": "3fdbd1ef-2d29-4856-95b5-29d05df345e0",
       "type": "number",
       "value": 0
     }
@@ -4495,6 +4495,17 @@
             "-",
             "0.2"
           ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Ticks_Para_Calentar",
+            "+",
+            "1"
+          ]
         }
       ]
     },
@@ -4542,6 +4553,28 @@
             "100",
             "1"
           ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Bloqueado",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "CargaActual",
+            "=",
+            "0"
+          ]
         }
       ]
     },
@@ -4566,19 +4599,8 @@
           "parameters": [
             "RoverLunar",
             "Temperatura",
-            ">=",
-            "-1"
-          ]
-        },
-        {
-          "type": {
-            "value": "NumberObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Temperatura",
             "<=",
-            "1"
+            "0"
           ]
         },
         {
@@ -4596,6 +4618,28 @@
           "parameters": [
             "RoverLunar",
             "Esta_Sobrecalentado",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Temperatura",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Bloqueado",
             "False",
             ""
           ]
@@ -4621,8 +4665,32 @@
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Ticks_Para_Calentar",
+            ">=",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Ticks_Para_Calentar",
+            "=",
+            "0"
+          ]
+        }
+      ]
     },
     {
       "type": "BuiltinCommonInstructions::Comment",
@@ -4719,6 +4787,28 @@
         },
         {
           "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Bloqueado",
+            "=",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
+            "=",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": []
@@ -4752,6 +4842,17 @@
             ">=",
             "100"
           ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Bloqueado",
+            "False",
+            ""
+          ]
         }
       ],
       "actions": [
@@ -4762,6 +4863,17 @@
           "parameters": [
             "RoverLunar",
             "Bloqueado",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
             "True",
             ""
           ]
@@ -4860,6 +4972,17 @@
             "True",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
+            "True",
+            ""
+          ]
         }
       ],
       "actions": [
@@ -4870,6 +4993,17 @@
           "parameters": [
             "RoverLunar",
             "Bloqueado",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
             "False",
             ""
           ]
@@ -4904,17 +5038,6 @@
           "parameters": [
             "EnJuego",
             "True",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "BooleanObjectVariable"
-          },
-          "parameters": [
-            "RoverLunar",
-            "Esta_Sobrecalentado",
-            "=",
             ""
           ]
         },
@@ -5009,8 +5132,30 @@
           "parameters": [
             "RoverLunar",
             "CargaActual",
-            ">=",
+            ">",
             "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Esta_Sobrecalentado",
+            "=",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "RoverLunar",
+            "Bloqueado",
+            "=",
+            ""
           ]
         }
       ],
