@@ -1177,12 +1177,6 @@
       "effects": [],
       "behaviors": [
         {
-          "name": "Sticker",
-          "type": "Sticker::Sticker",
-          "OnlyFollowPosition": false,
-          "IsDestroyedWithParent": false
-        },
-        {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
         }
@@ -2750,13 +2744,22 @@
       "actions": [
         {
           "type": {
-            "value": "Sticker::Sticker::Stick"
+            "value": "SetX"
           },
           "parameters": [
             "BasicFlame",
-            "Sticker",
-            "RoverLunar",
-            ""
+            "=",
+            "RoverLunar.X() + 36"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "BasicFlame",
+            "=",
+            "RoverLunar.Y() + 72"
           ]
         }
       ]
@@ -4237,7 +4240,7 @@
                 "RoverLunar",
                 "Temperatura",
                 "+",
-                "0.5"
+                "0.8"
               ]
             },
             {
