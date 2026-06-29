@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6972272683424331,
+    "zoomFactor": 0.534748904088338,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -34,39 +34,47 @@
   "variables": [
     {
       "name": "EnJuego",
+      "persistentUuid": "6a11a4ea-fde0-4e1b-bd39-36893862c388",
       "type": "boolean",
       "value": true
     },
     {
       "name": "PosicionElegida",
+      "persistentUuid": "521959dc-7f75-4756-abe8-98e97b794b07",
       "type": "number",
       "value": 0
     },
     {
       "name": "PosicionOcupada",
+      "persistentUuid": "e5bf8e81-2fb7-4817-a8bd-2ff3ea981ca2",
       "type": "number",
       "value": 0
     },
     {
       "name": "FrecuenciaCrateres",
+      "persistentUuid": "658c0321-fcae-415f-b2b8-894870c0473f",
       "type": "number",
       "value": 2
     },
     {
       "name": "CarrilAzar",
+      "persistentUuid": "4a3c74ab-c4da-4c67-91fb-7e58364cbda4",
       "type": "number",
       "value": 0
     },
     {
       "folded": true,
       "name": "PotencialesObstaculos",
+      "persistentUuid": "d6bec03c-1afb-48e5-9583-dc08e61c765e",
       "type": "array",
       "children": [
         {
+          "persistentUuid": "ada29e9f-f1cf-45ab-835c-2922158ef0e5",
           "type": "string",
           "value": "Piedra"
         },
         {
+          "persistentUuid": "f8eb55fc-ee80-438f-8828-1346213d623f",
           "type": "string",
           "value": "MinaEspacial"
         }
@@ -75,17 +83,21 @@
     {
       "folded": true,
       "name": "PosicionesEnXPotencialesASpawnear",
+      "persistentUuid": "07ce7b9f-6018-4323-8054-e3462c9e1e94",
       "type": "array",
       "children": [
         {
+          "persistentUuid": "2b4ceb2e-64cf-486b-bfd1-170488854e75",
           "type": "number",
           "value": 350
         },
         {
+          "persistentUuid": "3a6e15fe-237b-4bdc-b21f-301459ea848a",
           "type": "number",
           "value": 593
         },
         {
+          "persistentUuid": "d4705c53-b82d-4d91-9441-3b6d3e7b9403",
           "type": "number",
           "value": 835
         }
@@ -93,8 +105,15 @@
     },
     {
       "name": "FrecuenciaObstaculos",
+      "persistentUuid": "39c87f8c-5fe1-4c1f-a054-c0f17ac7f91a",
       "type": "number",
       "value": 5
+    },
+    {
+      "name": "CarrilActual",
+      "persistentUuid": "d7858a2e-a258-4b7b-911b-2b46f56a58c9",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -232,7 +251,7 @@
       "angle": 0,
       "customSize": true,
       "depth": 5,
-      "height": 715,
+      "height": 722,
       "keepRatio": true,
       "layer": "",
       "name": "Espacio",
@@ -486,6 +505,21 @@
           "name": "Carril2_Posicion2_Ocupado",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "AlertaCarril0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "AlertaCarril1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "AlertaCarril2",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1175,7 +1209,13 @@
       "persistentUuid": "7b656030-fd78-4cf4-90c0-997940934092",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "DañoActual",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -1445,6 +1485,11 @@
           "name": "Posicion_Ocupada",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ListoparaDisparar",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -1769,16 +1814,17 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "assets/Crater5",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Crater5.png",
+                  "image": "assets/Crater5",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1794,20 +1840,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 1,
-                        "y": 1
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 108,
-                        "y": 1
+                        "x": 100,
+                        "y": 0
                       },
                       {
-                        "x": 108,
-                        "y": 107
+                        "x": 100,
+                        "y": 100
                       },
                       {
-                        "x": 1,
-                        "y": 107
+                        "x": 0,
+                        "y": 100
                       }
                     ]
                   ]
@@ -2201,16 +2247,17 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "assets/Imagen_GameOver",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Imagen_GameOver.png",
+                  "image": "assets/Imagen_GameOver_Final.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2230,16 +2277,16 @@
                         "y": 0
                       },
                       {
-                        "x": 261,
+                        "x": 1365,
                         "y": 0
                       },
                       {
-                        "x": 261,
-                        "y": 131
+                        "x": 1365,
+                        "y": 767
                       },
                       {
                         "x": 0,
-                        "y": 131
+                        "y": 767
                       }
                     ]
                   ]
@@ -2398,6 +2445,200 @@
         "lineHeight": 0,
         "color": "22;252;0"
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "SimboloAdvertenciaRojo",
+      "persistentUuid": "ce366e69-a860-4d9f-a735-b7b8015b4b04",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Activo",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "assets/SimboloAdvertenciaRojo2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/SimboloAdvertenciaRojo2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 142
+                      },
+                      {
+                        "x": 0,
+                        "y": 142
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "alert",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "alert",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 142
+                      },
+                      {
+                        "x": 0,
+                        "y": 142
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "alert2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 142
+                      },
+                      {
+                        "x": 0,
+                        "y": 142
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/SimboloAdvertenciaRojo2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 142
+                      },
+                      {
+                        "x": 0,
+                        "y": 142
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -2498,6 +2739,9 @@
       },
       {
         "objectName": "PanelPrueba_HUD"
+      },
+      {
+        "objectName": "SimboloAdvertenciaRojo"
       }
     ]
   },
@@ -4785,6 +5029,17 @@
         },
         {
           "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "DisparoFuerte",
+            "DañoActual",
+            "=",
+            "RoverLunar.Variable(CargaActual)\n"
+          ]
+        },
+        {
+          "type": {
             "value": "AddForceAL"
           },
           "parameters": [
@@ -4853,7 +5108,7 @@
           },
           "parameters": [
             "",
-            "sonidos/20220731_Moon Patrol Theme - Metal Version.mp3",
+            "sonidos/cancion_v2.mp3",
             "yes",
             "",
             ""
@@ -4910,7 +5165,6 @@
       ]
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -4944,6 +5198,16 @@
             "PosicionOcupada",
             "=",
             "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "CarrilActual",
+            "=",
+            "RandomInRange(0,2)"
           ]
         }
       ],
@@ -5030,7 +5294,18 @@
                     "348",
                     "1",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5086,6 +5361,36 @@
                     "Carril",
                     "=",
                     "mod(PosicionElegida,3)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_0",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -5128,7 +5433,18 @@
                     "587",
                     "1",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5184,6 +5500,36 @@
                     "Carril",
                     "=",
                     "mod(PosicionElegida,3)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_1",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -5226,7 +5572,18 @@
                     "829",
                     "1",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5282,6 +5639,36 @@
                     "Carril",
                     "=",
                     "mod(PosicionElegida,3)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_2",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -5324,7 +5711,18 @@
                     "348",
                     "80",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5380,6 +5778,36 @@
                     "Carril",
                     "=",
                     "mod(PosicionElegida,3)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_0",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -5422,7 +5850,18 @@
                     "587",
                     "80",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5478,6 +5917,36 @@
                     "Carril",
                     "=",
                     "mod(PosicionElegida,3)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_1",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -5520,7 +5989,18 @@
                     "829",
                     "80",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5576,6 +6056,36 @@
                     "Carril",
                     "=",
                     "mod(PosicionElegida,3)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_2",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -5618,7 +6128,18 @@
                     "348",
                     "160",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5674,6 +6195,36 @@
                     "Carril",
                     "=",
                     "mod(PosicionElegida,3)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_0",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -5716,7 +6267,18 @@
                     "587",
                     "160",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5772,6 +6334,36 @@
                     "Carril",
                     "=",
                     "mod(PosicionElegida,3)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_1",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -5814,7 +6406,18 @@
                     "829",
                     "160",
                     "\"linear\"",
-                    "5",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "False",
                     ""
                   ]
                 },
@@ -5871,6 +6474,36 @@
                     "=",
                     "mod(PosicionElegida,3)"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_2",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "ListoparaDisparar",
+                    "True",
+                    ""
+                  ]
                 }
               ]
             },
@@ -5885,6 +6518,809 @@
                   "parameters": [
                     "",
                     "\"SpawnCooldown\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Health",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "6"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_0",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Health",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "7"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_1",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Ovni",
+                    "Health",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Ovni",
+                        "Carril_Posicion",
+                        "=",
+                        "8"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camino",
+                    "EnemigosCarril_2",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "CarrilActual",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "EnemigosCarril_0",
+                        "<",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril0",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "SimboloAdvertenciaRojo",
+                        "369",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Carril",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Activo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril0",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Activo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Animation",
+                        "=",
+                        "\"alert\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Resizable",
+                        "=",
+                        "59"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Resizable",
+                        "=",
+                        "52"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "CarrilActual",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "EnemigosCarril_1",
+                        "<",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril1",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "SimboloAdvertenciaRojo",
+                        "608",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Activo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril1",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Carril",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Animation",
+                        "=",
+                        "\"alert\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Resizable",
+                        "=",
+                        "59"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Resizable",
+                        "=",
+                        "52"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "CarrilActual",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "EnemigosCarril_2",
+                        "<",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril2",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "SimboloAdvertenciaRojo",
+                        "850",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Activo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Carril",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril2",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Animation",
+                        "=",
+                        "\"alert\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Resizable",
+                        "=",
+                        "52"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Resizable",
+                        "=",
+                        "59"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "SimboloAdvertenciaRojo",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "EnemigosCarril_0",
+                        ">=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Carril",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Activo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril0",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "EnemigosCarril_1",
+                        ">=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Carril",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Activo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril1",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "EnemigosCarril_2",
+                        ">=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Carril",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "SimboloAdvertenciaRojo",
+                        "Activo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Camino",
+                        "AlertaCarril2",
+                        "=",
+                        "1"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -5974,6 +7410,17 @@
                 "=",
                 "RoverLunar.Carril_Actual"
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Ovni",
+                "ListoparaDisparar",
+                "True",
+                ""
+              ]
             }
           ],
           "actions": [
@@ -6031,6 +7478,57 @@
                 ""
               ]
             }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Ovni",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Ovni",
+            "DisparoFuerte",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sonidos/sfx_danio_nave_alien.wav",
+            "",
+            "50",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Health::Health::Hit"
+          },
+          "parameters": [
+            "Ovni",
+            "Health",
+            "DisparoFuerte.Variable(DañoActual)",
+            "",
+            "",
+            ""
           ]
         }
       ]
@@ -6110,12 +7608,6 @@
             "",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         }
       ],
       "actions": [
@@ -6138,7 +7630,7 @@
           "parameters": [
             "Ovni",
             "Health",
-            "50",
+            "DisparoFuerte.Variable(DañoActual)",
             "",
             "",
             ""
@@ -6520,6 +8012,28 @@
             "+",
             "300 * TimeDelta()"
           ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+          },
+          "parameters": [
+            "Crater",
+            "Resizable",
+            "=",
+            "96"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+          },
+          "parameters": [
+            "Crater",
+            "Resizable",
+            "=",
+            "70"
+          ]
         }
       ]
     },
@@ -6634,9 +8148,31 @@
               "parameters": [
                 "",
                 "SimboloAdvertenciaAmarillo",
-                "315",
-                "0",
+                "369",
+                "80",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetWidth"
+              },
+              "parameters": [
+                "SimboloAdvertenciaAmarillo",
+                "Resizable",
+                "=",
+                "59"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetHeight"
+              },
+              "parameters": [
+                "SimboloAdvertenciaAmarillo",
+                "Resizable",
+                "=",
+                "52"
               ]
             },
             {
@@ -6702,9 +8238,31 @@
               "parameters": [
                 "",
                 "SimboloAdvertenciaAmarillo",
-                "560",
-                "0",
+                "608",
+                "80",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetHeight"
+              },
+              "parameters": [
+                "SimboloAdvertenciaAmarillo",
+                "Resizable",
+                "=",
+                "52"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetWidth"
+              },
+              "parameters": [
+                "SimboloAdvertenciaAmarillo",
+                "Resizable",
+                "=",
+                "59"
               ]
             },
             {
@@ -6770,9 +8328,31 @@
               "parameters": [
                 "",
                 "SimboloAdvertenciaAmarillo",
-                "800",
-                "0",
+                "850",
+                "80",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetWidth"
+              },
+              "parameters": [
+                "SimboloAdvertenciaAmarillo",
+                "Resizable",
+                "=",
+                "59"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetHeight"
+              },
+              "parameters": [
+                "SimboloAdvertenciaAmarillo",
+                "Resizable",
+                "=",
+                "52"
               ]
             },
             {
@@ -7122,9 +8702,31 @@
           "parameters": [
             "",
             "SimboloAdvertenciaAmarillo",
-            "560",
-            "0",
+            "608",
+            "80",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+          },
+          "parameters": [
+            "SimboloAdvertenciaAmarillo",
+            "Resizable",
+            "=",
+            "59"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+          },
+          "parameters": [
+            "SimboloAdvertenciaAmarillo",
+            "Resizable",
+            "=",
+            "52"
           ]
         },
         {
@@ -7290,43 +8892,9 @@
           "parameters": [
             "",
             "PantallaGameOver",
-            "650",
-            "335",
+            "96",
+            "21",
             ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "TGameOver",
-            "242",
-            "552",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-          },
-          "parameters": [
-            "PantallaGameOver",
-            "Resizable",
-            "=",
-            "1350"
-          ]
-        },
-        {
-          "type": {
-            "value": "ResizableCapability::ResizableBehavior::SetHeight"
-          },
-          "parameters": [
-            "PantallaGameOver",
-            "Resizable",
-            "=",
-            "750"
           ]
         },
         {
@@ -7336,7 +8904,7 @@
           "parameters": [
             "PantallaGameOver",
             "=",
-            "11000"
+            "110000"
           ]
         },
         {

@@ -494,7 +494,7 @@
       {
         "file": "assets/Crater5.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/Crater5.png\",\"extension\":\".png\"}",
         "name": "assets/Crater5.png",
         "smoothed": false,
         "userAdded": false
@@ -633,6 +633,76 @@
         "metadata": "",
         "name": "assets/potencial_panel_hud_2.png",
         "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Crater6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets/Crater5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SimboloAdvertenciaRojo2.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/SimboloAdvertenciaRojo2.png\",\"extension\":\".png\"}",
+        "name": "assets/SimboloAdvertenciaRojo2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/alert.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "alert",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/alert2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "alert2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/alarm-sound-effect.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/alarm-sound-effect.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/tindeck_1.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/tindeck_1.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Imagen_GameOver_Final.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/Imagen_GameOver_Final.png\",\"extension\":\".png\"}",
+        "name": "assets/Imagen_GameOver_Final.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "sonidos/cancion_v2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sonidos/cancion_v2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": false
       }
     ]
