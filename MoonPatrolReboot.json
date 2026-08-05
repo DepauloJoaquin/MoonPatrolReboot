@@ -1,7 +1,7 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Game",
   "gdVersion": {
-    "build": 272,
+    "build": 271,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -12,21 +12,21 @@
     "antialisingEnabledOnMobile": false,
     "folderProject": true,
     "orientation": "landscape",
-    "packageName": "com.example.gamename",
+    "packageName": "com.moonpatrolteam.moonpatrolreboot",
     "pixelsRounding": true,
     "projectUuid": "539a4c55-5af2-44f9-8105-9dcd4a7a984d",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
-    "version": "1.0.0",
-    "name": "MoonPatrolReboot",
-    "description": "",
-    "author": "",
+    "version": "1.1.0",
+    "name": "MoonPatrol Return",
+    "description": "A runner game that is based off the classic NES game Moon Patrol.",
+    "author": "MoonPatrolTeam",
     "windowWidth": 1280,
     "windowHeight": 720,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
-    "minFPS": 20,
+    "minFPS": 30,
     "verticalSync": false,
     "platformSpecificAssets": {
       "android-icon-144": "",
@@ -60,7 +60,7 @@
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
-      "backgroundImageResourceName": "",
+      "backgroundImageResourceName": "SpatialBackground",
       "gdevelopLogoStyle": "light",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0,
@@ -70,7 +70,7 @@
       "progressBarMaxWidth": 200,
       "progressBarMinWidth": 40,
       "progressBarWidthPercent": 30,
-      "showGDevelopSplash": true,
+      "showGDevelopSplash": false,
       "showProgressBar": true
     },
     "watermark": {
@@ -92,86 +92,6 @@
   "resources": {
     "resources": [
       {
-        "file": "camino_pixel_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_pixel_1.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/RoverLunar.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "RoverLunar",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "camino_pixel_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_pixel_2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ejemplo1_marcadorCamino.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ejemplo1_marcadorCamino.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ejemplo1_marcador_v1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ejemplo1_marcador_v1.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ejemplo1_marcadorCamino_v2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ejemplo1_marcadorCamino_v2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "camino_v2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_v2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "camino_pixel_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "camino_pixel_3.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ChatGPT Image 3 jun 2026, 04_03_55 p.m.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ChatGPT Image 3 jun 2026, 04_03_55 p.m.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "ChatGPT Image 3 jun 2026, 04_09_15 p.m.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "ChatGPT Image 3 jun 2026, 04_09_15 p.m.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "camino_pixel_4.png",
         "kind": "image",
         "metadata": "",
@@ -188,14 +108,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite2",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "Rover.png",
         "kind": "image",
         "metadata": "{\"localFilePath\":\"Rover.png\",\"extension\":\".png\"}",
@@ -204,70 +116,10 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite3.png\"}",
-        "name": "NewSprite3",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "../shield-4.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "../shield-4.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "iphone-low-battery.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "iphone-low-battery.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/NewSprite4.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite4.png\"}",
-        "name": "NewSprite4",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/NewSprite5.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite5.png\"}",
-        "name": "NewSprite5",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/NewSprite6.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite6",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/NewSprite7.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite7.png\"}",
         "name": "NewSprite7",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Rover.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Rover",
         "smoothed": false,
         "userAdded": false
       },
@@ -296,32 +148,12 @@
         "userAdded": false
       },
       {
-        "file": "sonidos/shield-4.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "sonidos/shield-4.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "sonidos/iphone-low-battery.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "sonidos/iphone-low-battery.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
         "file": "sonidos/Power Up 2.aac",
         "kind": "audio",
         "metadata": "",
         "name": "sonidos/Power Up 2.aac",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -331,16 +163,8 @@
         "metadata": "",
         "name": "sonidos/Death.aac",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Disparo.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/Disparo.png",
-        "smoothed": false,
         "userAdded": false
       },
       {
@@ -365,7 +189,7 @@
         "metadata": "",
         "name": "sonidos/tie-fighter-fire-1.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -375,8 +199,8 @@
         "metadata": "",
         "name": "sonidos/stormtrooper-blaster-charge-1.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "preloadAsSound": true,
+        "preloadInCache": true,
         "userAdded": false
       },
       {
@@ -385,8 +209,8 @@
         "metadata": "",
         "name": "sonidos/w-dl-44-blaster-pistol.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "preloadAsSound": true,
+        "preloadInCache": true,
         "userAdded": false
       },
       {
@@ -394,17 +218,9 @@
         "kind": "audio",
         "metadata": "",
         "name": "sonidos/20220731_Moon Patrol Theme - Metal Version.mp3",
-        "preloadAsMusic": false,
+        "preloadAsMusic": true,
         "preloadAsSound": false,
         "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "Nave_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Nave_1.png",
-        "smoothed": false,
         "userAdded": false
       },
       {
@@ -416,10 +232,10 @@
         "userAdded": false
       },
       {
-        "file": "ChatGPT Image 25 jun 2026, 05_08_58 p.m.png",
+        "file": "SpatialBackground.png",
         "kind": "image",
         "metadata": "",
-        "name": "ChatGPT Image 25 jun 2026, 05_08_58 p.m.png",
+        "name": "SpatialBackground",
         "smoothed": false,
         "userAdded": false
       },
@@ -428,30 +244,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/Disparo2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "nave_3.png",
-        "kind": "image",
-        "metadata": "{\"localFilePath\":\"nave_3.png\",\"extension\":\".png\"}",
-        "name": "nave_3.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "nave_rojo.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "nave_rojo.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "nave_roja2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "nave_roja2.png",
         "smoothed": false,
         "userAdded": false
       },
@@ -469,7 +261,7 @@
         "metadata": "",
         "name": "sonidos/impactoDeBala.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -479,7 +271,7 @@
         "metadata": "",
         "name": "sonidos/destruccion1.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -532,22 +324,12 @@
         "userAdded": false
       },
       {
-        "file": "sonidos/efecto_sonido_game_over_prueba_2.wav",
-        "kind": "audio",
-        "metadata": "",
-        "name": "sonidos/efecto_sonido_game_over_prueba_2.wav",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
         "file": "sonidos/efecto_sonido_game_over.wav",
         "kind": "audio",
         "metadata": "",
         "name": "sonidos/efecto_sonido_game_over.wav",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -565,7 +347,7 @@
         "metadata": "",
         "name": "sonidos/sfx_danio_rover.wav",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -575,7 +357,7 @@
         "metadata": "",
         "name": "sonidos/sfx_explosion_rover.wav",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -585,7 +367,7 @@
         "metadata": "",
         "name": "sonidos/sfx_explosion_nave_alien.wav",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -595,17 +377,7 @@
         "metadata": "",
         "name": "sonidos/sfx_danio_nave_alien.wav",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "sonidos/sfx_salto_rover.wav",
-        "kind": "audio",
-        "metadata": "",
-        "name": "sonidos/sfx_salto_rover.wav",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
       },
@@ -615,16 +387,8 @@
         "metadata": "",
         "name": "sonidos/sfx_salto_rover_final.wav",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/potencial_panel_hud_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/potencial_panel_hud_1.png",
-        "smoothed": false,
         "userAdded": false
       },
       {
@@ -634,6 +398,77 @@
         "name": "assets/potencial_panel_hud_2.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/9patch_Bordered Hud Grey_all_32.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "9patch_Bordered Hud Grey_all_32.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Game over dialogs/Pixel art/b6451298a85b275ad943340bd1394f488fa5e07a4fe1f69dd1ebc11220647437_9patch_Bordered Hud Grey_all_32.png",
+          "name": "9patch_Bordered Hud Grey_all_32.png"
+        }
+      },
+      {
+        "file": "assets/8BitOperatorPlus8Regular_Edited.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\8BitOperatorPlus8Regular_Edited.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Game over dialogs/Pixel art/15c1797cbcb41c3a753b6bbb21cfa60284cfaf81c9891c3abf78a8e0e1cacf59_8BitOperatorPlus8Regular_Edited.png",
+          "name": "8BitOperatorPlus8Regular_Edited.png"
+        }
+      },
+      {
+        "file": "assets/Small White Button_Hovered.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Small White Button_Hovered.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Game over dialogs/Pixel art/53d2ba892cb6a366c69deba9b229331f6cb7eedb22b53788773ade95c3ed0cba_Small White Button_Hovered.png",
+          "name": "Small White Button_Hovered.png"
+        }
+      },
+      {
+        "file": "assets/Small White Button_Idle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Small White Button_Idle.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Game over dialogs/Pixel art/0bba1ddd8c0b82a28c80d42bd025e5888c75948b28b7840a1ebd8fd7f5814844_Small White Button_Idle.png",
+          "name": "Small White Button_Idle.png"
+        }
+      },
+      {
+        "file": "assets/Small White Button_Pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Small White Button_Pressed.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Game over dialogs/Pixel art/4fd1b137e9c779a3f6bffeaf55f4bb5d8c27fc90f413597600b0c059cb9ababc_Small White Button_Pressed.png",
+          "name": "Small White Button_Pressed.png"
+        }
+      },
+      {
+        "file": "assets/8BitOperatorPlus8Regular_Edited.fnt",
+        "kind": "bitmapFont",
+        "metadata": "",
+        "name": "assets\\8BitOperatorPlus8Regular_Edited.fnt",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Game over dialogs/Pixel art/6b410f07a3a02e721a49d41795e84b56707ef28ac4d095d55f1fd1093760e134_8BitOperatorPlus8Regular_Edited.fnt",
+          "name": "8BitOperatorPlus8Regular_Edited.fnt"
+        }
       }
     ]
   },
@@ -642,14 +477,38 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "Score",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "HighScore",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/escena-sin-ttulo"
+      "referenceTo": "/layouts/game"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/game-over"
     }
   ],
-  "externalEvents": [],
+  "externalEvents": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/rovermechanics"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/enemies"
+    }
+  ],
   "eventsFunctionsExtensions": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
@@ -666,6 +525,18 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/panelspritecontinuousbar"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/leaderboarddialog"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/panelspritebutton"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/tweenintoview"
     }
   ],
   "externalLayouts": []

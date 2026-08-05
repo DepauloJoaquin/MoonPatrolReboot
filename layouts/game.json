@@ -1,0 +1,3677 @@
+{
+  "b": 255,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "Game",
+  "name": "Game",
+  "r": 247,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 249,
+  "uiSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 80,
+    "gridHeight": 80,
+    "gridDepth": 32,
+    "gridOffsetX": 40,
+    "gridOffsetY": 0,
+    "gridOffsetZ": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": false,
+    "zoomFactor": 0.6311973852562636,
+    "windowMask": false,
+    "selectedLayer": "",
+    "gameEditorMode": "instances-editor"
+  },
+  "objectsGroups": [
+    {
+      "name": "ObstaculosDestructibles",
+      "objects": []
+    }
+  ],
+  "variables": [
+    {
+      "name": "inGame",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "selectedPosition",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "occupiedPosition",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "holeQuantity",
+      "type": "number",
+      "value": 2
+    },
+    {
+      "name": "randomSlot",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "potencialObstacles",
+      "type": "array",
+      "children": [
+        {
+          "type": "string",
+          "value": "Piedra"
+        },
+        {
+          "type": "string",
+          "value": "MinaEspacial"
+        }
+      ]
+    },
+    {
+      "folded": true,
+      "name": "potencialXPositionToSpawn",
+      "type": "array",
+      "children": [
+        {
+          "type": "number",
+          "value": 350
+        },
+        {
+          "type": "number",
+          "value": 593
+        },
+        {
+          "type": "number",
+          "value": 835
+        }
+      ]
+    },
+    {
+      "name": "obstacleFrecuency",
+      "type": "number",
+      "value": 5
+    }
+  ],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1.058823529411765,
+      "height": 72,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MoonRover",
+      "persistentUuid": "9c91325c-a837-49ef-afb7-184c6146dfd8",
+      "width": 72,
+      "x": 604,
+      "y": 564,
+      "zOrder": 10000,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 15.062761506276152,
+      "height": 720,
+      "layer": "",
+      "name": "MoonFloor",
+      "persistentUuid": "1e127e96-0ff8-49cd-8005-1283cfedf751",
+      "width": 720,
+      "x": 280,
+      "y": -1,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 720,
+      "layer": "",
+      "name": "Lines",
+      "persistentUuid": "d1f9aa13-90a5-4a05-b23d-70147e2d4a05",
+      "width": 8,
+      "x": 756,
+      "y": 0,
+      "zOrder": 10001,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 2,
+      "height": 720,
+      "layer": "",
+      "name": "Lines",
+      "persistentUuid": "d0d7314d-5b15-4447-b2ec-5d39bec65edd",
+      "width": 8,
+      "x": 516,
+      "y": 0,
+      "zOrder": 10002,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 720,
+      "layer": "",
+      "name": "Lines",
+      "persistentUuid": "94cd7e28-f549-48ea-a926-c7da376ab603",
+      "width": 8,
+      "x": 272,
+      "y": 0,
+      "zOrder": 10003,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 720,
+      "layer": "",
+      "name": "Lines",
+      "persistentUuid": "ded92673-a0c5-462c-8be1-f72d5a71ccbf",
+      "width": 8,
+      "x": 1000,
+      "y": 0,
+      "zOrder": 10003,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BasicFlame",
+      "persistentUuid": "2190bd4c-79e7-4233-8d8b-3077949a3d70",
+      "width": 0,
+      "x": 639,
+      "y": 634,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 83,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Ovni",
+      "persistentUuid": "dd7c8f93-4ede-4d7d-ae4b-b5e2c5eb9b23",
+      "width": 105,
+      "x": -843,
+      "y": -349,
+      "zOrder": 10014,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 5,
+      "height": 715,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SpaceBackground",
+      "persistentUuid": "2918be82-b412-4dae-bc5b-3e8e29cb7c1a",
+      "width": 1280,
+      "x": 2,
+      "y": 0,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurboBar",
+      "persistentUuid": "ee122395-0945-4527-ab01-b5d917d1173e",
+      "width": 0,
+      "x": 79,
+      "y": 275,
+      "zOrder": 10015,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TemperatureBar",
+      "persistentUuid": "e38431c8-22a5-4e50-a503-f7dfdb010f1d",
+      "width": 0,
+      "x": 79,
+      "y": 183,
+      "zOrder": 10016,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TEscudo",
+      "persistentUuid": "a4936db9-3c15-4a90-8958-f5781ce8d501",
+      "width": 0,
+      "x": 86,
+      "y": 66,
+      "zOrder": 10017,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ShieldBar",
+      "persistentUuid": "a13b604d-b95b-4cf1-b5b4-1ac574e96577",
+      "width": 0,
+      "x": 79,
+      "y": 95,
+      "zOrder": 10018,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TTemperatura",
+      "persistentUuid": "65585f70-4318-4ffc-b5b0-5fa06bc4e7ce",
+      "width": 0,
+      "x": 82,
+      "y": 149,
+      "zOrder": 10019,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 243,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TTIndicadores",
+      "persistentUuid": "8150d397-95dc-4cc4-8412-6f068dc39ffc",
+      "width": 186,
+      "x": 48,
+      "y": 428,
+      "zOrder": 10020,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TTurbo",
+      "persistentUuid": "2a4f4ccd-5120-4448-9fa0-95e9623ed071",
+      "width": 0,
+      "x": 110,
+      "y": 243,
+      "zOrder": 10021,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "HUDPanel",
+      "persistentUuid": "702cf5d8-5e28-4283-bdbb-20452b0849d4",
+      "width": 0,
+      "x": 14,
+      "y": 10,
+      "zOrder": 950,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 330,
+      "layer": "",
+      "name": "HUDPanel",
+      "persistentUuid": "b23c0527-dcfc-45cc-a258-cddbe29deba1",
+      "width": 251,
+      "x": 12,
+      "y": 373,
+      "zOrder": 950,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ShootChargeBar",
+      "persistentUuid": "2194ec2a-3826-4776-b649-a1c3e47001bc",
+      "width": 0,
+      "x": 578,
+      "y": 668,
+      "zOrder": 10023,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 71,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TScore",
+      "persistentUuid": "4f117b66-88a7-47f0-8055-41768a56cb95",
+      "width": 177,
+      "x": 51,
+      "y": 454,
+      "zOrder": 10024,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 65,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TScore",
+      "persistentUuid": "03ff2c00-7ffb-48ea-a5ee-d3c0cf67aa88",
+      "width": 176,
+      "x": 50,
+      "y": 561,
+      "zOrder": 10025,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "MoonFloor",
+      "persistentUuid": "6ef00e6f-894f-4573-b770-085465869abd",
+      "texture": "camino_pixel_4.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [
+        {
+          "name": "Carril",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Carril_Posicion",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "EnemigosCarril_0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "EnemigosCarril_1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "EnemigosCarril_2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Carril0_Posicion0_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril0_Posicion1_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril0_Posicion2_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril1_Posicion0_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril1_Posicion1_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril1_Posicion2_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril2_Posicion0_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril2_Posicion1_Ocupado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Carril2_Posicion2_Ocupado",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MoonRover",
+      "persistentUuid": "2b879f6c-612a-4152-ab64-afb3dab417e2",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "isJumping",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "numberOfJumps",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "maxiumScaleLimit",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "miniumScaleLimit",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "hasDobleJump",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "shieldCooldown",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "shieldDuration",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "canUseShield",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "hasJumpDelay",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "isOverheated",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "timeToSwapSlotInSeconds",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "maxiumShieldDuration",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "overheatPenalty",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "temperature",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tickForWarming",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "variable",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "isLocked",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "actualLoad",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "actualSlot",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "hasShield",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "isOnTurboMode",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "isFolded": true,
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 30,
+          "CurrentHealth": 0,
+          "MaxHealth": 30,
+          "DamageCooldown": 1,
+          "AllowOverHealing": false,
+          "IsHealthJustDamaged": false,
+          "DamageToBeApplied": 0,
+          "HitAtLeastOnce": false,
+          "ChanceToDodge": 0,
+          "IsJustDodged": false,
+          "HealToBeApplied": 0,
+          "HealthRegenRate": 0,
+          "HealthRegenDelay": 0,
+          "IsJustHealed": false,
+          "CurrentShieldPoints": 2.0247e-320,
+          "MaxShieldPoints": 0,
+          "ShieldDuration": 5,
+          "ShieldRegenRate": 0,
+          "BlockExcessDamage": false,
+          "ShieldRegenDelay": 0,
+          "IsShieldJustDamaged": false,
+          "ShieldDamageTaken": 2.0247e-320,
+          "FlatDamageReduction": 0,
+          "PercentDamageReduction": 0
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "RoverLunar",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Rover.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 48,
+                        "y": 1
+                      },
+                      {
+                        "x": 48,
+                        "y": 58
+                      },
+                      {
+                        "x": 15,
+                        "y": 58
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Escudo",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Escudo",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 48,
+                        "y": 1
+                      },
+                      {
+                        "x": 48,
+                        "y": 58
+                      },
+                      {
+                        "x": 15,
+                        "y": 58
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Rover3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 48,
+                        "y": 1
+                      },
+                      {
+                        "x": 48,
+                        "y": 58
+                      },
+                      {
+                        "x": 15,
+                        "y": 58
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Rover2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 48,
+                        "y": 1
+                      },
+                      {
+                        "x": 48,
+                        "y": 58
+                      },
+                      {
+                        "x": 15,
+                        "y": 58
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Lines",
+      "persistentUuid": "39eae7fc-98aa-4a18-88d4-cd7b67c51482",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "ContadorCooldown",
+      "persistentUuid": "be9b73d4-5406-4275-a388-1f4d7484ddb1",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "0",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "0",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TextoCooldown",
+      "persistentUuid": "b8dffd8c-114a-4515-af41-9e91aa34d93e",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "CooldownEscudo :",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "CooldownEscudo :",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "DuracionEscudo",
+      "persistentUuid": "565475bf-4a77-4ccb-a9de-b8bb18cdc65c",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "DuracionEscudo :",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "DuracionEscudo :",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "ContadorEscudo",
+      "persistentUuid": "01fd1a47-8962-4c6b-b885-4827822b2e0d",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "0",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "0",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Shield",
+      "persistentUuid": "7d8dfcae-7061-4b5d-9af2-209859f682ee",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite7",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 13,
+                        "y": 13
+                      },
+                      {
+                        "x": 50,
+                        "y": 13
+                      },
+                      {
+                        "x": 50,
+                        "y": 50
+                      },
+                      {
+                        "x": 13,
+                        "y": 50
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": false,
+      "assetStoreId": "ee9e34df96c454414c9236df0d3a721e60b9a34cca8f123ecbefcd58a6671833",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 1,
+      "emitterForceMax": 300,
+      "emitterForceMin": 200,
+      "flow": 100,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 300,
+      "name": "BasicFlame",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 40,
+      "particleBlue2": 0,
+      "particleColor1": "255;122;40",
+      "particleColor2": "255;0;0",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 122,
+      "particleGreen2": 0,
+      "particleLifeTimeMax": 1,
+      "particleLifeTimeMin": 0.2,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 100,
+      "particleSize2": 0,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "25974cb5-88d5-47f2-a048-ce0f3a288632",
+      "rendererParam1": 25,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 3,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": false,
+          "IsDestroyedWithParent": false
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "ChargedBullet",
+      "persistentUuid": "7b656030-fd78-4cf4-90c0-997940934092",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpriteDisparoPrevisional.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 19,
+                        "y": 15
+                      },
+                      {
+                        "x": 45,
+                        "y": 15
+                      },
+                      {
+                        "x": 45,
+                        "y": 55
+                      },
+                      {
+                        "x": 19,
+                        "y": 55
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Bullet",
+      "persistentUuid": "7f69bc7c-28a1-4149-bca9-2e5df16b6c80",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "assets/Disparo",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Disparo",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 12,
+                        "y": 0
+                      },
+                      {
+                        "x": 12,
+                        "y": 16
+                      },
+                      {
+                        "x": 4,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Texto_Temperatura",
+      "persistentUuid": "33b5e9fc-9c54-443b-9a31-8d5d70b14976",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Temperatura : ",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Temperatura : ",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Controles",
+      "persistentUuid": "8bf8806b-4557-4d13-8ba9-e1704d957422",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "A Para desplazarse hacia la izquierda\nD Para desplazarse hacia la derecha\nJ   Para disparo básico\nK  Mantener tecla para disparo potenciado\nI Para turbo\nL Para Escudo\nSpace Para Salto\n",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 226,
+        "g": 144,
+        "r": 74
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "A Para desplazarse hacia la izquierda\nD Para desplazarse hacia la derecha\nJ   Para disparo básico\nK  Mantener tecla para disparo potenciado\nI Para turbo\nL Para Escudo\nSpace Para Salto\n",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "74;144;226"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "AtencionControles",
+      "persistentUuid": "d35dfdfd-1e93-41ac-8f44-61bb4425fda8",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Precaucion: \nCada acción que no sea el escudo genera temperatura en el motor del Rover Lunar\nSi se sobrepasa se generará un bloqueo de controles de disparo y turbo que no lo dejara utilizar\n",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 27,
+        "g": 2,
+        "r": 208
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Precaucion: \nCada acción que no sea el escudo genera temperatura en el motor del Rover Lunar\nSi se sobrepasa se generará un bloqueo de controles de disparo y turbo que no lo dejara utilizar\n",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "208;2;27"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Ovni",
+      "persistentUuid": "a0745dd6-88ec-4bbe-b5f0-22774706c3e3",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Carril",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "Carril_Posicion",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "Posicion_Ocupada",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "CurrentHealth": 0,
+          "MaxHealth": 100,
+          "DamageCooldown": 0,
+          "AllowOverHealing": false,
+          "IsHealthJustDamaged": false,
+          "DamageToBeApplied": 0,
+          "HitAtLeastOnce": false,
+          "ChanceToDodge": 0,
+          "IsJustDodged": false,
+          "HealToBeApplied": 0,
+          "HealthRegenRate": 0,
+          "HealthRegenDelay": 0,
+          "IsJustHealed": false,
+          "CurrentShieldPoints": 2.0247e-320,
+          "MaxShieldPoints": 0,
+          "ShieldDuration": 5,
+          "ShieldRegenRate": 0,
+          "BlockExcessDamage": false,
+          "ShieldRegenDelay": 0,
+          "IsShieldJustDamaged": false,
+          "ShieldDamageTaken": 2.0247e-320,
+          "FlatDamageReduction": 0,
+          "PercentDamageReduction": 0
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "nave_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 75,
+                        "y": 73
+                      },
+                      {
+                        "x": 483,
+                        "y": 73
+                      },
+                      {
+                        "x": 483,
+                        "y": 354
+                      },
+                      {
+                        "x": 75,
+                        "y": 354
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "SpaceBackground",
+      "persistentUuid": "6812b14b-60fa-439f-9593-730abd64588a",
+      "texture": "SpatialBackground",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "AlienBullet",
+      "persistentUuid": "b8b3d38c-2fb5-4a92-bb34-1316128ad996",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Disparo2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 12,
+                        "y": 0
+                      },
+                      {
+                        "x": 12,
+                        "y": 16
+                      },
+                      {
+                        "x": 4,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Mine",
+      "persistentUuid": "111c4bc6-88b4-4aed-a2c2-5c0248eaf7f8",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "CurrentHealth": 0,
+          "MaxHealth": 100,
+          "DamageCooldown": 0,
+          "AllowOverHealing": false,
+          "IsHealthJustDamaged": false,
+          "DamageToBeApplied": 0,
+          "HitAtLeastOnce": false,
+          "ChanceToDodge": 0,
+          "IsJustDodged": false,
+          "HealToBeApplied": 0,
+          "HealthRegenRate": 0,
+          "HealthRegenDelay": 0,
+          "IsJustHealed": false,
+          "CurrentShieldPoints": 2.0247e-320,
+          "MaxShieldPoints": 0,
+          "ShieldDuration": 5,
+          "ShieldRegenRate": 0,
+          "BlockExcessDamage": false,
+          "ShieldRegenDelay": 0,
+          "IsShieldJustDamaged": false,
+          "ShieldDamageTaken": 2.0247e-320,
+          "FlatDamageReduction": 0,
+          "PercentDamageReduction": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "MinaEspacial.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Warning",
+      "persistentUuid": "d4a3769b-7949-419a-9d18-bee9b5b90e6c",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/SimboloAdvertenciaRojo5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 0
+                      },
+                      {
+                        "x": 160,
+                        "y": 142
+                      },
+                      {
+                        "x": 0,
+                        "y": 142
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Crater",
+      "persistentUuid": "b2ded71a-378e-4242-b992-a3c531a417be",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Crater5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 108,
+                        "y": 1
+                      },
+                      {
+                        "x": 108,
+                        "y": 107
+                      },
+                      {
+                        "x": 1,
+                        "y": 107
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "98213fe7f1e2289ef501a2e0a96ed2292535e720bfa616da42cf780d99a3c6d0",
+      "name": "TurboBar",
+      "persistentUuid": "f5af09ea-1254-4e36-adc1-7a3306584a14",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Blue Dot Bar",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Adjustment",
+          "name": "Effect",
+          "doubleParameters": {
+            "alpha": 1,
+            "blue": 0,
+            "brightness": 1,
+            "contrast": 1,
+            "gamma": 1,
+            "green": 5,
+            "red": 0,
+            "saturation": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Outline",
+          "name": "Effect2",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 0.5
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false,
+        "InitialValue": 0,
+        "MaxValue": 3
+      }
+    },
+    {
+      "assetStoreId": "98213fe7f1e2289ef501a2e0a96ed2292535e720bfa616da42cf780d99a3c6d0",
+      "name": "TemperatureBar",
+      "persistentUuid": "ea63322b-de24-42b0-bfdc-948901ce321b",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Blue Dot Bar",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Adjustment",
+          "name": "Coloración",
+          "doubleParameters": {
+            "alpha": 1,
+            "blue": 0,
+            "brightness": 1,
+            "contrast": 1,
+            "gamma": 1,
+            "green": 0,
+            "red": 5,
+            "saturation": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Outline",
+          "name": "Contorno",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 0.5
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false,
+        "InitialValue": 0,
+        "MaxValue": 100
+      }
+    },
+    {
+      "assetStoreId": "98213fe7f1e2289ef501a2e0a96ed2292535e720bfa616da42cf780d99a3c6d0",
+      "name": "ShieldBar",
+      "persistentUuid": "09b058db-65ab-48aa-8c0a-8c009d1097c3",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Blue Dot Bar",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect2",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 0.5
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": true,
+        "InitialValue": 10,
+        "MaxValue": 10
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "TEscudo",
+      "persistentUuid": "4c109e4b-a34a-4d92-9915-3a99a22c66b0",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Escudo : 10",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 252,
+        "r": 22
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Escudo : 10",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "22;252;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "TTemperatura",
+      "persistentUuid": "552e6466-9876-42d3-b775-a783521a691b",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Temperatura",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 252,
+        "r": 22
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Temperatura",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "22;252;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "TTurbo",
+      "persistentUuid": "1f7f6933-a059-4ed9-ba60-d06ac6e76393",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Turbo",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 252,
+        "r": 22
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Turbo",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "22;252;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "TTIndicadores",
+      "persistentUuid": "96cab230-c134-4ae2-a7b2-e513666b7e2e",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Controles: \n\n[Espacio] Salto\n[⬅] Izquierda\n[➡] Derecha \n[Z] Disparo (Mantener para disparo cargado)\n[X] Escudo\n[C] Turbo",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 19,
+      "color": {
+        "b": 0,
+        "g": 252,
+        "r": 22
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Controles: \n\n[Espacio] Salto\n[⬅] Izquierda\n[➡] Derecha \n[Z] Disparo (Mantener para disparo cargado)\n[X] Escudo\n[C] Turbo",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 19,
+        "lineHeight": 0,
+        "color": "22;252;0"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Rock",
+      "persistentUuid": "97c377e8-861a-442c-9a06-44d94fefb283",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Piedra.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 21,
+                        "y": 21
+                      },
+                      {
+                        "x": 82,
+                        "y": 21
+                      },
+                      {
+                        "x": 82,
+                        "y": 81
+                      },
+                      {
+                        "x": 21,
+                        "y": 81
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "GameOver",
+      "persistentUuid": "f4bd3fa0-8820-4922-8339-0269b62d641f",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Imagen_GameOver.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 130.5,
+                    "y": 65.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 261,
+                        "y": 0
+                      },
+                      {
+                        "x": 261,
+                        "y": 131
+                      },
+                      {
+                        "x": 0,
+                        "y": 131
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TGameOver",
+      "persistentUuid": "2ce88df4-4f55-485a-a83f-ce36f111db58",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Presiona \"Space\" para volver a jugar.",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 50,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Presiona \"Space\" para volver a jugar.",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 50,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "HUDPanel",
+      "persistentUuid": "51c4fc93-069b-46b1-92b0-c1d789ffd664",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/potencial_panel_hud_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 251,
+                        "y": 0
+                      },
+                      {
+                        "x": 251,
+                        "y": 353
+                      },
+                      {
+                        "x": 0,
+                        "y": 353
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "TTControles",
+      "persistentUuid": "a99ece41-a248-4c0a-a2c7-aa4701300f33",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Controles:",
+      "font": "",
+      "textAlignment": "center",
+      "characterSize": 15,
+      "color": {
+        "b": 0,
+        "g": 252,
+        "r": 22
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Controles:",
+        "font": "",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 15,
+        "lineHeight": 0,
+        "color": "22;252;0"
+      }
+    },
+    {
+      "assetStoreId": "98213fe7f1e2289ef501a2e0a96ed2292535e720bfa616da42cf780d99a3c6d0",
+      "name": "ShootChargeBar",
+      "persistentUuid": "702a7de2-0381-4e3b-b93e-cddb03b897f8",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Blue Dot Bar",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Adjustment",
+          "name": "Effect",
+          "doubleParameters": {
+            "alpha": 1,
+            "blue": 5,
+            "brightness": 1,
+            "contrast": 1,
+            "gamma": 1,
+            "green": 5,
+            "red": 5,
+            "saturation": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Outline",
+          "name": "Effect2",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 0.5
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": true,
+        "InitialValue": 0,
+        "MaxValue": 100
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "TScore",
+      "persistentUuid": "49ebc240-f0c6-4b16-bb00-fc909276afb3",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "0",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 252,
+        "r": 22
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "0",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "22;252;0"
+      }
+    }
+  ],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "folderName": "Effects",
+        "children": [
+          {
+            "objectName": "Shield"
+          },
+          {
+            "objectName": "BasicFlame"
+          },
+          {
+            "objectName": "Warning"
+          }
+        ]
+      },
+      {
+        "folderName": "Objects",
+        "children": [
+          {
+            "objectName": "Rock"
+          },
+          {
+            "objectName": "Mine"
+          },
+          {
+            "objectName": "ChargedBullet"
+          },
+          {
+            "objectName": "Crater"
+          },
+          {
+            "objectName": "Bullet"
+          },
+          {
+            "objectName": "AlienBullet"
+          },
+          {
+            "objectName": "Ovni"
+          },
+          {
+            "objectName": "MoonRover"
+          }
+        ]
+      },
+      {
+        "folderName": "UI",
+        "children": [
+          {
+            "folderName": "Bars",
+            "children": [
+              {
+                "objectName": "TemperatureBar"
+              },
+              {
+                "objectName": "ShieldBar"
+              },
+              {
+                "objectName": "TurboBar"
+              },
+              {
+                "objectName": "ShootChargeBar"
+              }
+            ]
+          },
+          {
+            "folderName": "Text",
+            "children": [
+              {
+                "objectName": "TGameOver"
+              },
+              {
+                "objectName": "TTControles"
+              },
+              {
+                "objectName": "TTIndicadores"
+              },
+              {
+                "objectName": "TTurbo"
+              },
+              {
+                "objectName": "TTemperatura"
+              },
+              {
+                "objectName": "TEscudo"
+              },
+              {
+                "objectName": "AtencionControles"
+              },
+              {
+                "objectName": "ContadorEscudo"
+              },
+              {
+                "objectName": "TextoCooldown"
+              },
+              {
+                "objectName": "DuracionEscudo"
+              },
+              {
+                "objectName": "ContadorCooldown"
+              },
+              {
+                "objectName": "Controles"
+              },
+              {
+                "objectName": "TScore"
+              },
+              {
+                "objectName": "Texto_Temperatura"
+              }
+            ]
+          },
+          {
+            "folderName": "Backgronds",
+            "children": [
+              {
+                "objectName": "GameOver"
+              },
+              {
+                "objectName": "Lines"
+              },
+              {
+                "objectName": "HUDPanel"
+              },
+              {
+                "objectName": "SpaceBackground"
+              },
+              {
+                "objectName": "MoonFloor"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "RoverMechanics"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Enemies"
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Game Mechanics",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Game Init",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "inGame",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "sonidos/20220731_Moon Patrol Theme - Metal Version.mp3",
+                    "yes",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Game Visuals",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Moon floor movement"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::YOffset"
+                  },
+                  "parameters": [
+                    "MoonFloor",
+                    "-",
+                    "300 * TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Space movement"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::YOffset"
+                  },
+                  "parameters": [
+                    "SpaceBackground",
+                    "-",
+                    "300 * TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::YOffset"
+                  },
+                  "parameters": [
+                    "SpaceBackground",
+                    "-",
+                    "300 * TimeDelta()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Obstacles generation",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "For rocks and mines"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CooldownGeneradorDeObstaculos\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CooldownGeneradorDeObstaculos\"",
+                    ">=",
+                    "obstacleFrecuency"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CooldownGeneradorDeObstaculos\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CreateByName"
+                  },
+                  "parameters": [
+                    "",
+                    "ObstaculosDestructibles",
+                    "VariableString(potencialObstacles[Random(VariableChildCount(potencialObstacles) - 1)])",
+                    "potencialXPositionToSpawn[RandomInRange(0, VariableChildCount(potencialXPositionToSpawn) - 1)]",
+                    "-100",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Warning",
+                    "560",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Warning",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Enhance difficulty"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CooldownAumentoDificultad\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CooldownAumentoDificultad\"",
+                    ">=",
+                    "15"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "obstacleFrecuency",
+                    ">=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "obstacleFrecuency",
+                    "-",
+                    "0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CooldownAumentoDificultad\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Game Over",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "MoonRover",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "UnloadAllAudio"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "sonidos/efecto_sonido_game_over.wav",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "GameOver",
+                    "650",
+                    "335",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "TGameOver",
+                    "242",
+                    "552",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "GameOver",
+                    "Resizable",
+                    "=",
+                    "1350"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "GameOver",
+                    "Resizable",
+                    "=",
+                    "750"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "GameOver",
+                    "=",
+                    "11000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "TGameOver",
+                    "=",
+                    "11010"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PickAllInstances"
+                  },
+                  "parameters": [
+                    "",
+                    "Bullet"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PickAllInstances"
+                  },
+                  "parameters": [
+                    "",
+                    "ChargedBullet"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PickAllInstances"
+                  },
+                  "parameters": [
+                    "",
+                    "AlienBullet"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "inGame",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "MoonRover",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Game Over\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Score",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "TTIndicadores",
+                    "\"exitTime\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"scoreTimer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "TScore"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ReadNumberFromStorage"
+                  },
+                  "parameters": [
+                    "\"HighScore\"",
+                    "\"Scores\"",
+                    "HighScore",
+                    "HighScore"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Score",
+                    ">=",
+                    "HighScore"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "HighScore",
+                    "=",
+                    "Score"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "TTControles",
+                    "\"exitTime\"",
+                    ">=",
+                    "6"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "TTIndicadores"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "TScore",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"exitTime\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ZOrder"
+                  },
+                  "parameters": [
+                    "TScore",
+                    "=",
+                    "10025"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "TScore",
+                    "Text",
+                    "=",
+                    "\"HighScore: \" + HighScore"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ZOrder"
+                  },
+                  "parameters": [
+                    "TScore",
+                    "=",
+                    "10024"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "TScore",
+                    "Text",
+                    "=",
+                    "\"Score: \" + Score"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "TTControles",
+                    "\"scoreTimer\"",
+                    ">=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Score",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"scoreTimer\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "MoonRover",
+                        "isOnTurboMode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Score",
+                        "+",
+                        "2"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Reset",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "inGame",
+                    "=",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"r\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Game\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Ambient Hemisphere Light",
+          "doubleParameters": {
+            "elevation": 40,
+            "intensity": 0.33,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "groundColor": "127;127;127",
+            "skyColor": "255;255;255",
+            "top": "Z+"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Scene3D::DirectionalLight",
+          "name": "3D Sun Light",
+          "doubleParameters": {
+            "distanceFromCamera": 1500,
+            "elevation": 40,
+            "frustumSize": 4000,
+            "intensity": 0.75,
+            "minimumShadowBias": 0,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "color": "255;255;255",
+            "shadowQuality": "medium",
+            "top": "Z+"
+          },
+          "booleanParameters": {
+            "isCastingShadow": true
+          }
+        }
+      ]
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "Animation",
+      "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "Effect",
+      "type": "EffectCapability::EffectBehavior"
+    },
+    {
+      "name": "Flippable",
+      "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "Health",
+      "type": "Health::Health"
+    },
+    {
+      "name": "Opacity",
+      "type": "OpacityCapability::OpacityBehavior"
+    },
+    {
+      "name": "Resizable",
+      "type": "ResizableCapability::ResizableBehavior"
+    },
+    {
+      "name": "Scale",
+      "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Sticker",
+      "type": "Sticker::Sticker"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
+    }
+  ]
+}
